@@ -1,3 +1,9 @@
+// Loading Screen
+window.addEventListener('load', function () {
+    const loading = document.getElementById('loading');
+    loading.style.display = 'none'; // Hide loading screen after content loads
+});
+
 // Tab functionality for switching content
 function openTab(evt, facility) {
     var i, tabcontent, tablinks;
