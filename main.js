@@ -4,6 +4,38 @@ window.addEventListener('load', function () {
     loading.style.display = 'none'; // Hide loading screen after content loads
 });
 
+// Language switcher functionality
+function changeLanguage(language) {
+    const langButton = document.querySelectorAll('.lang-button');
+    
+    // Update the active button
+    langButton.forEach(button => {
+        button.classList.remove('active');
+    });
+    document.querySelector(`.lang-button:contains(${language})`).classList.add('active');
+
+    // Text content in different languages
+    const texts = {
+        en: {
+            clubName: "Sunderkhal Sports Club",
+            aboutText: "Welcome to Sunderkhal Sports Club, where sportsmanship thrives! Join us for exciting events and activities.",
+            sectionTitle: "About Us"
+        },
+        hi: {
+            clubName: "सुंदरखाल स्पोर्ट्स क्लब",
+            aboutText: "सुंदरखाल स्पोर्ट्स क्लब में आपका स्वागत है, जहाँ खेल की भावना प्रबल होती है! रोमांचक कार्यक्रमों और गतिविधियों के लिए हमारे साथ जुड़ें।",
+            sectionTitle: "हमारे बारे में"
+        }
+    };
+
+    // Update text content based on selected language
+    document.getElementById('club-name').innerText = texts[language].clubName;
+    document.getElementById('about-text').innerText = texts[language].aboutText;
+    document.querySelectorAll('.section-title').forEach(title => {
+        title.innerText = texts[language].sectionTitle;
+    });
+}
+
 // Tab functionality for switching content
 function openTab(evt, facility) {
     var i, tabcontent, tablinks;
