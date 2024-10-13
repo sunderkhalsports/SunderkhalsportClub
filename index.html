@@ -3,109 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Sunderkhal Sports Club - the hub of community fitness and sports!">
-    <meta name="keywords" content="Sunderkhal, Sports Club, Fitness, Community">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sunderkhal Sports Club</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-
-    <!-- Header with Hero Section -->
-    <header>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Sunderkhal Sports Club</h1>
-                <p>Your fitness journey begins here.</p>
-                <a href="#about" class="btn">Explore More</a>
-            </div>
-        </div>
-    </header>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
 
     <!-- Navigation Bar -->
-    <nav id="navbar">
+    <nav>
         <ul>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#events">Events</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Scroll Progress Bar -->
-    <div id="progress-bar"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Sunderkhal Sports Club</h1>
+            <p>Experience the future of sports and fitness</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="dark-section">
-            <div class="container">
-                <h2>About Sunderkhal Sports Club</h2>
-                <p>We are dedicated to fostering sportsmanship and fitness for all. From football to yoga, we offer the best-in-class facilities and a community atmosphere where everyone can thrive.</p>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="dark-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a premier sports club in the region, offering state-of-the-art facilities and training programs to athletes of all levels.</p>
+        </div>
+    </section>
 
-        <!-- Facilities Section with Interactive Tabs -->
-        <section id="facilities" class="light-section">
-            <div class="container">
-                <h2>Our Facilities</h2>
-                <div class="tabs">
-                    <button class="tablinks" onclick="openFacility(event, 'Cricket')">Cricket</button>
-                    <button class="tablinks" onclick="openFacility(event, 'Football')">Football</button>
-                    <button class="tablinks" onclick="openFacility(event, 'Badminton')">Badminton</button>
-                </div>
-                <div id="Cricket" class="tabcontent">
-                    <h3>Cricket</h3>
-                    <p>Our cricket grounds are designed to professional standards, perfect for both casual play and league matches.</p>
-                </div>
-                <div id="Football" class="tabcontent">
-                    <h3>Football</h3>
-                    <p>Our state-of-the-art football field offers players a premier space to practice and compete at the highest levels.</p>
-                </div>
-                <div id="Badminton" class="tabcontent">
-                    <h3>Badminton</h3>
-                    <p>Our indoor badminton courts are ideal for year-round training and tournaments.</p>
-                </div>
+    <!-- Facilities Section -->
+    <section id="facilities" class="light-section">
+        <div class="container">
+            <h2>Our Facilities</h2>
+            <div class="tabs">
+                <button class="tablinks" onclick="openTab(event, 'Gym')">Gym</button>
+                <button class="tablinks" onclick="openTab(event, 'Swimming')">Swimming Pool</button>
+                <button class="tablinks" onclick="openTab(event, 'Tennis')">Tennis Courts</button>
             </div>
-        </section>
+            <div id="Gym" class="tabcontent">
+                <h3>Gym</h3>
+                <p>Fully equipped gym with modern machines and personal trainers available.</p>
+            </div>
+            <div id="Swimming" class="tabcontent">
+                <h3>Swimming Pool</h3>
+                <p>Olympic-sized pool for all levels of swimmers, with separate lanes for training.</p>
+            </div>
+            <div id="Tennis" class="tabcontent">
+                <h3>Tennis Courts</h3>
+                <p>Professional-grade tennis courts with coaching available for all ages.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Events Section with Countdown Timer -->
-        <section id="events" class="dark-section">
-            <div class="container">
-                <h2>Upcoming Event: Annual Sports Meet</h2>
-                <div id="countdown">
-                    <div><span id="days"></span> Days</div>
-                    <div><span id="hours"></span> Hours</div>
-                    <div><span id="minutes"></span> Minutes</div>
-                    <div><span id="seconds"></span> Seconds</div>
-                </div>
-                <p>Join us for an unforgettable day of competition and community!</p>
-            </div>
-        </section>
-
-        <!-- Contact Section with Form -->
-        <section id="contact" class="light-section">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <p>Email: info@sunderkhalsports.com | Phone: +91 9876543210</p>
-            </div>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="dark-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
     </footer>
-
-    <!-- JavaScript for Interactivity -->
-    <script src="js/main.js"></script>
 </body>
-</html>
+                                  </html>
