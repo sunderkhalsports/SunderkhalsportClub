@@ -3,97 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sunderkhal Sports Club">
     <title>Sunderkhal Sports Club</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- Scroll Progress Bar -->
-    <div id="progress-bar"></div>
+    <div id="loading">
+        <div class="loader">Loading...</div>
+    </div>
 
-    <!-- Header Section -->
-    <header class="hero-section dark-section">
-        <div class="hero-content">
-            <h1>Sunderkhal Sports Club</h1>
-            <p>The hub of excellence in sports!</p>
-            <a href="#facilities" class="btn">Explore Facilities</a>
-        </div>
+    <header>
+        <h1>Sunderkhal Sports Club</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Facilities Section -->
-    <section id="facilities" class="light-section">
-        <div class="container">
-            <h2>Our Facilities</h2>
-            <div class="tabs">
-                <button class="tablinks" onclick="openTab(event, 'Gym')">Gym</button>
-                <button class="tablinks" onclick="openTab(event, 'Swimming')">Swimming Pool</button>
-                <button class="tablinks" onclick="openTab(event, 'Tennis')">Tennis Courts</button>
-            </div>
-            <div id="Gym" class="tabcontent">
-                <h3>Gym</h3>
-                <p>Fully equipped gym with modern machines and personal trainers available.</p>
-            </div>
-            <div id="Swimming" class="tabcontent">
-                <h3>Swimming Pool</h3>
-                <p>Olympic-sized pool for all levels of swimmers, with separate lanes for training.</p>
-            </div>
-            <div id="Tennis" class="tabcontent">
-                <h3>Tennis Courts</h3>
-                <p>Professional-grade tennis courts with coaching available for all ages.</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Sunderkhal Sports Club, where sportsmanship thrives! Join us for exciting events and activities.</p>
+        </section>
 
-    <!-- Tournament Section -->
-    <section id="tournament" class="dark-section">
-        <div class="container">
+        <section id="facilities">
+            <h2>Facilities</h2>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'indoor')">Indoor</button>
+                <button class="tablinks" onclick="openTab(event, 'outdoor')">Outdoor</button>
+                <button class="tablinks" onclick="openTab(event, 'esports')">eSports</button>
+            </div>
+            <div id="indoor" class="tabcontent">
+                <h3>Indoor Facilities</h3>
+                <p>Explore our state-of-the-art indoor facilities including basketball courts, badminton courts, and more!</p>
+            </div>
+            <div id="outdoor" class="tabcontent">
+                <h3>Outdoor Facilities</h3>
+                <p>Enjoy our outdoor fields for football, cricket, and athletics, surrounded by nature!</p>
+            </div>
+            <div id="esports" class="tabcontent">
+                <h3>eSports Facilities</h3>
+                <p>Dive into the world of gaming with our dedicated eSports arena and gaming lounges!</p>
+            </div>
+        </section>
+
+        <section id="tournaments">
             <h2>Tournaments</h2>
-            <p>We organize a variety of tournaments throughout the year. Whether you're a fan of indoor, outdoor, or eSports competitions, we have something for everyone!</p>
+            <p>Stay tuned for our upcoming tournaments! Participate and showcase your skills!</p>
+        </section>
 
-            <!-- Indoor, Outdoor, eSports -->
-            <div class="tabs">
-                <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
-                <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
-                <button class="tablinks" onclick="openTab(event, 'eSports')">eSports</button>
-            </div>
-
-            <div id="Indoor" class="tabcontent">
-                <h3>Indoor Tournaments</h3>
-                <p>We host a variety of indoor games like badminton, table tennis, chess, and more.</p>
-            </div>
-
-            <div id="Outdoor" class="tabcontent">
-                <h3>Outdoor Tournaments</h3>
-                <p>Join us for outdoor sports events such as football, cricket, and athletics.</p>
-            </div>
-
-            <div id="eSports" class="tabcontent">
-                <h3>eSports Tournaments</h3>
-                <p>We host the most exciting eSports tournaments with games like FIFA, Fortnite, and League of Legends.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="light-section">
-        <div class="container">
+        <section id="contact">
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" required>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <textarea id="message" required></textarea>
+                <button type="submit">Submit</button>
             </form>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Section -->
-    <footer class="dark-section">
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </main>
+
+    <footer>
         <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
-    </html>
+</html>
