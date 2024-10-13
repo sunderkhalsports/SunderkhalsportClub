@@ -3,85 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Sunderkhal Sports Club. Promoting sports and fitness in the community.">
     <title>Sunderkhal Sports Club</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            background-color: #34495e;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Welcome to Sunderkhal Sports Club</h1>
+        <div class="container">
+            <h1>Sunderkhal Sports Club</h1>
+        </div>
     </header>
 
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#facilities">Facilities</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
     </nav>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Sunderkhal Sports Club is dedicated to promoting sports and fitness in our community. We offer a variety of sports facilities to help you stay active and healthy.</p>
-    </section>
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Sunderkhal Sports Club is dedicated to promoting sports and fitness in our community. We offer a variety of sports facilities to help you stay active and healthy.</p>
+            </div>
+        </section>
 
-    <section id="facilities">
-        <h2>Our Facilities</h2>
-        <p>We offer facilities for cricket, football, badminton, and more. Our club provides modern equipment and a friendly atmosphere for all members.</p>
-    </section>
+        <section id="facilities">
+            <div class="container">
+                <h2>Our Facilities</h2>
+                <p>We offer facilities for cricket, football, badminton, and more. Our club provides modern equipment and a friendly atmosphere for all members.</p>
+            </div>
+        </section>
 
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Check out some images of our club and past events (you can add images here).</p>
-    </section>
+        <section id="gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <p>Check out some images of our club and past events.</p>
+                <img src="images/club-event.jpg" alt="Sports Club Event" width="300">
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@sunderkhalsportsclub.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>Address: Sunderkhal Village, Uttarakhand</p>
-    </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Email: info@sunderkhalsportsclub.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Address: Sunderkhal Village, Uttarakhand</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
