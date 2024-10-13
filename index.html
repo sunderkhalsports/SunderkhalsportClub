@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Sunderkhal Sports Club - Promoting fitness and sports for all.">
-    <meta name="keywords" content="Sunderkhal Sports, Fitness, Sports Club">
+    <meta name="description" content="Join Sunderkhal Sports Club - the hub of community fitness and sports!">
+    <meta name="keywords" content="Sunderkhal, Sports Club, Fitness, Community">
     <title>Sunderkhal Sports Club</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -15,60 +15,85 @@
     <header>
         <div class="hero">
             <div class="hero-text">
-                <h1>Welcome to Sunderkhal Sports Club</h1>
-                <p>Empowering the community through sports and fitness.</p>
-                <a href="#about" class="btn">Discover More</a>
+                <h1>Sunderkhal Sports Club</h1>
+                <p>Your fitness journey begins here.</p>
+                <a href="#about" class="btn">Explore More</a>
             </div>
         </div>
     </header>
 
     <!-- Navigation Bar -->
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#events">Events</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Sections -->
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Main Content -->
     <main>
         <!-- About Section -->
         <section id="about" class="dark-section">
             <div class="container">
-                <h2>About Us</h2>
-                <p>Sunderkhal Sports Club is a space where passion for sports meets dedication to fitness. Our club brings together people of all ages to engage in various sports and develop their potential.</p>
+                <h2>About Sunderkhal Sports Club</h2>
+                <p>We are dedicated to fostering sportsmanship and fitness for all. From football to yoga, we offer the best-in-class facilities and a community atmosphere where everyone can thrive.</p>
             </div>
         </section>
 
-        <!-- Facilities Section -->
+        <!-- Facilities Section with Interactive Tabs -->
         <section id="facilities" class="light-section">
             <div class="container">
-                <h2>Facilities</h2>
-                <p>State-of-the-art facilities for cricket, football, badminton, and more. Designed to meet professional standards, our club offers the best environment for fitness and fun.</p>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="dark-section">
-            <div class="container">
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <img src="images/club-event1.jpg" alt="Event 1">
-                    <img src="images/club-event2.jpg" alt="Event 2">
-                    <img src="images/club-event3.jpg" alt="Event 3">
+                <h2>Our Facilities</h2>
+                <div class="tabs">
+                    <button class="tablinks" onclick="openFacility(event, 'Cricket')">Cricket</button>
+                    <button class="tablinks" onclick="openFacility(event, 'Football')">Football</button>
+                    <button class="tablinks" onclick="openFacility(event, 'Badminton')">Badminton</button>
+                </div>
+                <div id="Cricket" class="tabcontent">
+                    <h3>Cricket</h3>
+                    <p>Our cricket grounds are designed to professional standards, perfect for both casual play and league matches.</p>
+                </div>
+                <div id="Football" class="tabcontent">
+                    <h3>Football</h3>
+                    <p>Our state-of-the-art football field offers players a premier space to practice and compete at the highest levels.</p>
+                </div>
+                <div id="Badminton" class="tabcontent">
+                    <h3>Badminton</h3>
+                    <p>Our indoor badminton courts are ideal for year-round training and tournaments.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Events Section with Countdown Timer -->
+        <section id="events" class="dark-section">
+            <div class="container">
+                <h2>Upcoming Event: Annual Sports Meet</h2>
+                <div id="countdown">
+                    <div><span id="days"></span> Days</div>
+                    <div><span id="hours"></span> Hours</div>
+                    <div><span id="minutes"></span> Minutes</div>
+                    <div><span id="seconds"></span> Seconds</div>
+                </div>
+                <p>Join us for an unforgettable day of competition and community!</p>
+            </div>
+        </section>
+
+        <!-- Contact Section with Form -->
         <section id="contact" class="light-section">
             <div class="container">
                 <h2>Contact Us</h2>
-                <p>Email: info@sunderkhalsportsclub.com</p>
-                <p>Phone: +91 9876543210</p>
-                <p>Address: Sunderkhal Village, Uttarakhand</p>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p>Email: info@sunderkhalsports.com | Phone: +91 9876543210</p>
             </div>
         </section>
     </main>
@@ -80,17 +105,7 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
+    <!-- JavaScript for Interactivity -->
+    <script src="js/main.js"></script>
 </body>
 </html>
