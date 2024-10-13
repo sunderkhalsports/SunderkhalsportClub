@@ -12,25 +12,29 @@
     </div>
 
     <header>
-        <h1>Sunderkhal Sports Club</h1>
+        <h1 id="club-name">Sunderkhal Sports Club</h1>
+        <div class="language-switcher">
+            <button onclick="changeLanguage('en')" class="lang-button active">English</button>
+            <button onclick="changeLanguage('hi')" class="lang-button">हिन्दी</button>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#tournaments">Tournaments</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="about">
-            <h2>About Us</h2>
-            <p>Welcome to Sunderkhal Sports Club, where sportsmanship thrives! Join us for exciting events and activities.</p>
+            <h2 class="section-title">About Us</h2>
+            <p id="about-text">Welcome to Sunderkhal Sports Club, where sportsmanship thrives! Join us for exciting events and activities.</p>
         </section>
 
         <section id="facilities">
-            <h2>Facilities</h2>
+            <h2 class="section-title">Facilities</h2>
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'indoor')">Indoor</button>
                 <button class="tablinks" onclick="openTab(event, 'outdoor')">Outdoor</button>
@@ -51,12 +55,12 @@
         </section>
 
         <section id="tournaments">
-            <h2>Tournaments</h2>
+            <h2 class="section-title">Tournaments</h2>
             <p>Stay tuned for our upcoming tournaments! Participate and showcase your skills!</p>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
+            <h2 class="section-title">Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required>
