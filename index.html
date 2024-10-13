@@ -3,41 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sunderkhal Sports Club">
     <title>Sunderkhal Sports Club</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- Progress Bar -->
+    <!-- Scroll Progress Bar -->
     <div id="progress-bar"></div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-text">
-            <h1>Welcome to Sunderkhal Sports Club</h1>
-            <p>Experience the future of sports and fitness</p>
-            <a href="#about" class="btn">Explore More</a>
+    <!-- Header Section -->
+    <header class="hero-section dark-section">
+        <div class="hero-content">
+            <h1>Sunderkhal Sports Club</h1>
+            <p>The hub of excellence in sports!</p>
+            <a href="#facilities" class="btn">Explore Facilities</a>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="dark-section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are a premier sports club in the region, offering state-of-the-art facilities and training programs to athletes of all levels.</p>
-        </div>
-    </section>
+    </header>
 
     <!-- Facilities Section -->
     <section id="facilities" class="light-section">
@@ -63,22 +45,55 @@
         </div>
     </section>
 
+    <!-- Tournament Section -->
+    <section id="tournament" class="dark-section">
+        <div class="container">
+            <h2>Tournaments</h2>
+            <p>We organize a variety of tournaments throughout the year. Whether you're a fan of indoor, outdoor, or eSports competitions, we have something for everyone!</p>
+
+            <!-- Indoor, Outdoor, eSports -->
+            <div class="tabs">
+                <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
+                <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
+                <button class="tablinks" onclick="openTab(event, 'eSports')">eSports</button>
+            </div>
+
+            <div id="Indoor" class="tabcontent">
+                <h3>Indoor Tournaments</h3>
+                <p>We host a variety of indoor games like badminton, table tennis, chess, and more.</p>
+            </div>
+
+            <div id="Outdoor" class="tabcontent">
+                <h3>Outdoor Tournaments</h3>
+                <p>Join us for outdoor sports events such as football, cricket, and athletics.</p>
+            </div>
+
+            <div id="eSports" class="tabcontent">
+                <h3>eSports Tournaments</h3>
+                <p>We host the most exciting eSports tournaments with games like FIFA, Fortnite, and League of Legends.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="dark-section">
+    <section id="contact" class="light-section">
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
+    <!-- Footer Section -->
+    <footer class="dark-section">
+        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
     </footer>
 </body>
-                                  </html>
+    </html>
