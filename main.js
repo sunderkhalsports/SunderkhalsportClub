@@ -2,22 +2,21 @@
 
 // Function to handle tab switching
 function openTab(evt, tabName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
 
-    // Get all elements with class="tabcontent" and hide them
+    // Hide all tab contents
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
+    // Remove active class from all tab links
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
+    // Show the current tab and add an "active" class to the button
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
@@ -32,7 +31,7 @@ window.addEventListener('load', function () {
     }, 500);
 });
 
-// Initialize the first tab to be open by default
+// Automatically click the first tab to display it
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementsByClassName('tablinks')[0].click(); // Automatically click the first tab
+    document.getElementsByClassName('tablinks')[0].click();
 });
