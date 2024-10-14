@@ -1,54 +1,38 @@
 // script.js
 
-// Preloader
-window.addEventListener('load', function () {
-    const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.style.opacity = '0'; // Fade out effect
-        setTimeout(() => {
-            preloader.style.display = 'none'; // Remove from DOM after fade
-        }, 500);
-    }, 1000); // Display for 1 second
-});
-
-// Tabs Functionality
+// Function to handle tab switching
 function openTab(evt, tabName) {
+    // Declare all variables
     var i, tabcontent, tablinks;
 
-    // Hide all tab content
+    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    // Remove the 'active' class from all tab links
+    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab and add an 'active' class to the button that opened the tab
+    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
-// Smooth Scrolling for Navigation
-const links = document.querySelectorAll('nav ul li a');
-
-links.forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetPosition = document.querySelector(targetId).offsetTop;
-
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
+// Preloader functionality
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
 });
 
-// Initialize first tab as open
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".tablinks").click(); // Click the first tab by default
+// Initialize the first tab to be open by default
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementsByClassName('tablinks')[0].click(); // Automatically click the first tab
 });
