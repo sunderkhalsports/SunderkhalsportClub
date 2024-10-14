@@ -1,3 +1,5 @@
+// script.js
+
 // Preloader
 window.addEventListener('load', function () {
     document.getElementById('preloader').style.display = 'none';
@@ -28,7 +30,6 @@ function openTab(evt, tabName) {
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
