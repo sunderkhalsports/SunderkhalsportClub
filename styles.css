@@ -1,167 +1,97 @@
-/* General Styles */
+/* styles.css */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    color: #ffffff;
+    background-color: #1e1e1e;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Serif for headings */
-    color: #3498db; /* Blue heading for trust */
+    color: #00BFFF; /* Psychological color for trust */
 }
 
-a {
-    color: #3498db; /* Trust with blue links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #e74c3c; /* Bright hover effect */
-}
-
-/* Preloader */
-#preloader {
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#preloader .spinner {
-    border: 5px solid #3498db;
-    border-top: 5px solid #f39c12; /* Spinner with blue and yellow */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Navbar */
-nav {
-    background-color: #3498db; /* Calm blue for trust */
+header {
+    background: linear-gradient(90deg, #000000, #434343);
     padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    font-weight: bold;
+    color: #00BFFF;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #e74c3c; /* Hover effect */
+    color: #FFD700; /* Gold color for warmth and energy */
 }
 
-/* Parallax Sections */
-.parallax-section {
-    height: 600px;
-    background-size: cover;
-    background-image: url('your-image.jpg');
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.parallax-section h2 {
-    padding-top: 150px;
-    font-size: 3rem;
-    animation: fadeIn 1.5s ease-out;
+.tabcontent {
+    display: none;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-50px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Content Sections */
-.content-section {
-    padding: 100px 0;
-    background-color: #f1f1f1;
-    transition: background-color 0.5s ease;
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    animation: slideIn 1.2s ease-in;
-}
-
-.content-section p {
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
-}
-
-@keyframes slideIn {
-    0% { opacity: 0; transform: translateX(-50px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
-/* Inverted Text for Highlighted Sections */
-.inverted-text {
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-}
-
-/* Tabs */
-.tab {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.tab button {
-    background-color: #3498db;
-    color: white;
-    padding: 14px 20px;
+.tablinks {
+    background-color: #3e3e3e;
     border: none;
+    color: white;
+    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 0 5px;
+    transition: background-color 0.3s;
 }
 
-.tab button.active, .tab button:hover {
-    background-color: #2ecc71; /* Green for hover and active */
+.tablinks:hover {
+    background-color: #00BFFF;
 }
 
-/* Footer */
 footer {
-    background-color: #333;
-    padding: 40px;
     text-align: center;
-    color: #ccc;
-    font-size: 0.9rem;
-    }
+    padding: 15px;
+    background-color: #000000;
+}
+
+.loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #00BFFF;
+}
+
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
