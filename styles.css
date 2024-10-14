@@ -1,31 +1,31 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1c1c1c;
-    color: #fff;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif; /* Serif for headings */
-    color: #ff6b6b; /* Red-orange to draw attention */
+    color: #3498db; /* Blue heading for trust */
 }
 
 a {
-    color: #3498db; /* Blue for links */
+    color: #3498db; /* Trust with blue links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff6b6b; /* Hover effect to switch attention to red */
+    color: #e74c3c; /* Bright hover effect */
 }
 
 /* Preloader */
 #preloader {
-    background-color: #111;
+    background-color: #fff;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -36,7 +36,7 @@ a:hover {
 
 #preloader .spinner {
     border: 5px solid #3498db;
-    border-top: 5px solid #ff6b6b;
+    border-top: 5px solid #f39c12; /* Spinner with blue and yellow */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -50,12 +50,11 @@ a:hover {
 
 /* Navbar */
 nav {
-    background-color: #222;
+    background-color: #3498db; /* Calm blue for trust */
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 10;
-    transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -75,25 +74,22 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6b6b;
+    color: #e74c3c; /* Hover effect */
 }
 
 /* Parallax Sections */
 .parallax-section {
     height: 600px;
     background-size: cover;
+    background-image: url('your-image.jpg');
     background-attachment: fixed;
-    position: relative;
+    color: #fff;
+    text-align: center;
 }
 
 .parallax-section h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 150px;
     font-size: 3rem;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     animation: fadeIn 1.5s ease-out;
 }
 
@@ -105,18 +101,12 @@ nav ul li a:hover {
 /* Content Sections */
 .content-section {
     padding: 100px 0;
-    background-color: #2e2e2e;
-    color: #fff;
+    background-color: #f1f1f1;
     transition: background-color 0.5s ease;
-}
-
-.content-section.active {
-    background-color: #444; /* Change background on scroll reveal */
 }
 
 .content-section h2 {
     font-size: 2.5rem;
-    color: #ff6b6b;
     text-align: center;
     animation: slideIn 1.2s ease-in;
 }
@@ -126,15 +116,28 @@ nav ul li a:hover {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    color: #ccc;
+    color: #333;
 }
 
 @keyframes slideIn {
-    0% { transform: translateX(-50px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Tabs in Tournaments Section */
+/* Inverted Text for Highlighted Sections */
+.inverted-text {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+/* Tabs */
 .tab {
     display: flex;
     justify-content: center;
@@ -142,7 +145,7 @@ nav ul li a:hover {
 }
 
 .tab button {
-    background-color: #444;
+    background-color: #3498db;
     color: white;
     padding: 14px 20px;
     border: none;
@@ -151,15 +154,14 @@ nav ul li a:hover {
 }
 
 .tab button.active, .tab button:hover {
-    background-color: #ff6b6b;
+    background-color: #2ecc71; /* Green for hover and active */
 }
 
 /* Footer */
 footer {
-    background-color: #111;
+    background-color: #333;
     padding: 40px;
     text-align: center;
     color: #ccc;
     font-size: 0.9rem;
-    border-top: 1px solid #333;
-}
+    }
