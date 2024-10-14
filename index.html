@@ -4,106 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="preloader-animation"></div>
+        <div class="spinner"></div>
     </div>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tournament">Tournaments</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tournament">Tournaments</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section parallax-section">
-        <div class="home-content">
-            <h1>Welcome to Sunderkhal Sports Club</h1>
-            <p>Where sports and community unite</p>
-        </div>
+    <!-- Hero Section (Parallax) -->
+    <section id="home" class="parallax-section">
+        <h2>Welcome to Sunderkhal Sports Club</h2>
+        <p>Experience the thrill of competition and the joy of community.</p>
     </section>
 
-    <!-- Tournament Section -->
+    <!-- Tournaments Section -->
     <section id="tournament" class="content-section">
-        <h2>Our Tournaments</h2>
-        <div class="tournament-tabs">
-            <button class="tablinks active" onclick="openTab(event, 'Indoor')">Indoor</button>
+        <h2 style="color: blue;">Tournaments</h2>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
             <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
             <button class="tablinks" onclick="openTab(event, 'eSports')">eSports</button>
         </div>
-
-        <!-- Indoor Section -->
         <div id="Indoor" class="tabcontent">
-            <h3>Indoor Games</h3>
-            <div class="tournament-info">
-                <h4>Badminton</h4>
-                <p>Join our competitive badminton tournaments.</p>
-            </div>
-            <div class="tournament-info">
-                <h4>Table Tennis</h4>
-                <p>Challenge yourself in our table tennis competitions.</p>
-            </div>
+            <h3>Indoor Tournaments</h3>
+            <p>Information about indoor tournaments.</p>
         </div>
-
-        <!-- Outdoor Section -->
         <div id="Outdoor" class="tabcontent">
-            <h3>Outdoor Games</h3>
-            <div class="tournament-info">
-                <h4>Football</h4>
-                <p>Join our thrilling football league and show your skills.</p>
-            </div>
-            <div class="tournament-info">
-                <h4>Cricket</h4>
-                <p>Compete in our exciting cricket tournaments.</p>
-            </div>
+            <h3>Outdoor Tournaments</h3>
+            <p>Information about outdoor tournaments.</p>
         </div>
-
-        <!-- eSports Section -->
         <div id="eSports" class="tabcontent">
-            <h3>eSports</h3>
-            <div class="tournament-info">
-                <h4>FIFA</h4>
-                <p>Play and win in our virtual football tournaments.</p>
-            </div>
-            <div class="tournament-info">
-                <h4>Call of Duty</h4>
-                <p>Compete in our COD tournaments and emerge victorious.</p>
-            </div>
+            <h3>eSports Tournaments</h3>
+            <p>Information about eSports tournaments.</p>
         </div>
     </section>
 
-    <!-- Parallax Section -->
-    <section class="parallax-section">
-        <div class="parallax-content">
-            <h2>Sports Unites Us</h2>
-            <p>Engage with a community of passionate athletes.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
+    <!-- About Us Section -->
     <section id="about" class="content-section">
-        <h2>About Us</h2>
-        <p>Sunderkhal Sports Club has been a hub for sports enthusiasts for over a decade. We organize tournaments across multiple disciplines, fostering sportsmanship and unity.</p>
+        <h2 style="color: green;">About Us</h2>
+        <p style="font-family: 'Georgia', serif;">We are a community-driven sports club located in Sunderkhal...</p>
+        <div class="inverted-text">Changing the game with every match!</div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="content-section">
-        <h2>Contact Us</h2>
-        <p>For inquiries, reach us at <a href="mailto:contact@sunderkhalsports.com">contact@sunderkhalsports.com</a>.</p>
+        <h2 style="color: yellow;">Contact Us</h2>
+        <p>Want to know more? Get in touch with us today.</p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
+        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
     </footer>
 </body>
 </html>
