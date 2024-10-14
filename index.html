@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
 <body>
+    <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
 
-    <!-- Hero Section with Parallax -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Sunderkhal Sports Club</h1>
-            <p>The finest sports experience for Indoor, Outdoor, and eSports</p>
-            <a href="#tournaments" class="btn">Explore Tournaments</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <header>
+        <h1>Welcome to Sunderkhal Sports Club</h1>
+    </header>
 
-    <!-- Tournament Section with Tabs -->
-    <section id="tournaments">
-        <h2 class="section-title">Tournaments</h2>
-        <div class="tab">
+    <!-- Tournament Section -->
+    <section id="tournament">
+        <h2>Tournament</h2>
+        <div class="tabs">
             <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
             <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
             <button class="tablinks" onclick="openTab(event, 'eSports')">eSports</button>
@@ -33,23 +29,18 @@
 
         <div id="Indoor" class="tabcontent">
             <h3>Indoor Games</h3>
-            <p>Details about Indoor Games.</p>
+            <p>Explore a variety of indoor sports like badminton, table tennis, and more.</p>
         </div>
 
         <div id="Outdoor" class="tabcontent">
             <h3>Outdoor Games</h3>
-            <p>Details about Outdoor Games.</p>
+            <p>We host exciting outdoor tournaments in football, cricket, and athletics.</p>
         </div>
 
         <div id="eSports" class="tabcontent">
             <h3>eSports</h3>
-            <p>Details about eSports.</p>
+            <p>Join our competitive eSports tournaments for games like FIFA, PUBG, and more.</p>
         </div>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to Sunderkhal Sports Club, where we offer a unique blend of Indoor, Outdoor, and eSports experiences in a premium environment.</p>
     </section>
 
     <footer>
