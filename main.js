@@ -4,27 +4,24 @@ window.addEventListener('load', function () {
     preloader.style.display = 'none';
 });
 
-// Tab functionality for Tournaments Section
+// Tab functionality
 function openTab(evt, tabName) {
-    // Hide all tab content
     let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName('tabcontent');
+    tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = 'none';
+        tabcontent[i].style.display = "none";
     }
 
-    // Remove active class from all tablinks
-    tablinks = document.getElementsByClassName('tablinks');
+    tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(' active', '');
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab and add active class
-    document.getElementById(tabName).style.display = 'block';
-    evt.currentTarget.className += ' active';
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
-// Set default tab to "Indoor" on load
+// Open default tab on load
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.tablinks').click();
 });
