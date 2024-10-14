@@ -4,83 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="loading">
-        <div class="loader">Loading...</div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
 
     <header>
-        <h1 id="club-name">Sunderkhal Sports Club</h1>
-        <div class="language-switcher">
-            <button onclick="changeLanguage('en')" class="lang-button active">English</button>
-            <button onclick="changeLanguage('hi')" class="lang-button">हिन्दी</button>
-        </div>
+        <h1 id="title">Welcome to Sunderkhal Sports Club</h1>
         <nav>
             <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#facilities" class="nav-link">Facilities</a></li>
-                <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section id="about">
-            <h2 class="section-title">About Us</h2>
-            <p id="about-text">Welcome to Sunderkhal Sports Club, where sportsmanship thrives! Join us for exciting events and activities.</p>
+        <section id="tournaments">
+            <h2 class="section-title">Tournaments</h2>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
+                <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
+                <button class="tablinks" onclick="openTab(event, 'Esports')">eSports</button>
+            </div>
+            <div id="Indoor" class="tabcontent">
+                <h3>Indoor Tournaments</h3>
+                <p>Join our exciting indoor tournaments that include basketball, badminton, and table tennis.</p>
+            </div>
+            <div id="Outdoor" class="tabcontent">
+                <h3>Outdoor Tournaments</h3>
+                <p>Participate in thrilling outdoor tournaments such as football, cricket, and athletics.</p>
+            </div>
+            <div id="Esports" class="tabcontent">
+                <h3>eSports Tournaments</h3>
+                <p>Compete in our eSports tournaments featuring popular games like FIFA, Call of Duty, and more.</p>
+            </div>
         </section>
 
         <section id="facilities">
             <h2 class="section-title">Facilities</h2>
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'indoor')">Indoor</button>
-                <button class="tablinks" onclick="openTab(event, 'outdoor')">Outdoor</button>
-                <button class="tablinks" onclick="openTab(event, 'esports')">eSports</button>
-            </div>
-            <div id="indoor" class="tabcontent">
-                <h3>Indoor Facilities</h3>
-                <p>Explore our state-of-the-art indoor facilities including basketball courts, badminton courts, and more!</p>
-            </div>
-            <div id="outdoor" class="tabcontent">
-                <h3>Outdoor Facilities</h3>
-                <p>Enjoy our outdoor fields for football, cricket, and athletics, surrounded by nature!</p>
-            </div>
-            <div id="esports" class="tabcontent">
-                <h3>eSports Facilities</h3>
-                <p>Dive into the world of gaming with our dedicated eSports arena and gaming lounges!</p>
-            </div>
+            <p>We offer state-of-the-art facilities, including:</p>
+            <ul>
+                <li>Indoor sports courts for various games.</li>
+                <li>Outdoor fields for soccer, cricket, and more.</li>
+                <li>eSports arenas equipped with the latest technology.</li>
+                <li>A fitness center with modern equipment.</li>
+            </ul>
         </section>
 
-        <section id="tournaments">
-            <h2 class="section-title">Tournaments</h2>
-            <p>Stay tuned for our upcoming tournaments! Participate and showcase your skills!</p>
+        <section id="gallery">
+            <h2 class="section-title">Gallery</h2>
+            <p>Check out some highlights from our events:</p>
+            <div class="gallery-container">
+                <img src="img1.jpg" alt="Tournament 1" class="gallery-item" />
+                <img src="img2.jpg" alt="Tournament 2" class="gallery-item" />
+                <img src="img3.jpg" alt="Tournament 3" class="gallery-item" />
+                <img src="img4.jpg" alt="Tournament 4" class="gallery-item" />
+            </div>
         </section>
 
         <section id="contact">
             <h2 class="section-title">Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+            <p>For more information, reach out to us at: <a href="mailto:info@sunderkhal.com">info@sunderkhal.com</a></p>
         </section>
-
-        <div id="progress-container">
-            <div id="progress-bar"></div>
-        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        <p>© 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
     </footer>
-
-    <script src="main.js"></script>
 </body>
-</html>
+                    </html>
