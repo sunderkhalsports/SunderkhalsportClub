@@ -10,17 +10,32 @@
 <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="loader"></div>
+        <div class="preloader-animation"></div>
     </div>
 
     <!-- Main Content -->
     <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tournament">Tournament</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
         <h1>Welcome to Sunderkhal Sports Club</h1>
     </header>
 
+    <!-- Parallax Section -->
+    <section class="parallax-section" id="home">
+        <div class="parallax-content">
+            <h2>Sports, Passion & Victory</h2>
+            <p>Join us for the best tournaments!</p>
+        </div>
+    </section>
+
     <!-- Tournament Section -->
-    <section id="tournament">
-        <h2>Tournament</h2>
+    <section id="tournament" class="content-section">
+        <h2>Tournaments</h2>
         <div class="tabs">
             <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
             <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
@@ -29,22 +44,28 @@
 
         <div id="Indoor" class="tabcontent">
             <h3>Indoor Games</h3>
-            <p>Explore a variety of indoor sports like badminton, table tennis, and more.</p>
+            <p>Explore exciting indoor tournaments.</p>
         </div>
 
         <div id="Outdoor" class="tabcontent">
             <h3>Outdoor Games</h3>
-            <p>We host exciting outdoor tournaments in football, cricket, and athletics.</p>
+            <p>Join our outdoor games and feel the adrenaline!</p>
         </div>
 
         <div id="eSports" class="tabcontent">
             <h3>eSports</h3>
-            <p>Join our competitive eSports tournaments for games like FIFA, PUBG, and more.</p>
+            <p>Take part in competitive eSports challenges.</p>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <h2>About Sunderkhal Sports Club</h2>
+        <p>We bring together athletes from different sports disciplines, indoor, outdoor, and eSports, fostering a sense of community and passion for competition.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        <p>&copy; 2024 Sunderkhal Sports Club</p>
     </footer>
 </body>
 </html>
