@@ -6,22 +6,20 @@ window.addEventListener('load', function () {
 
 // Tab functionality for Tournaments Section
 function openTab(evt, tabName) {
-    // Declare all variables
+    // Hide all tab content
     let i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName('tabcontent');
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = 'none';
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
+    // Remove active class from all tablinks
     tablinks = document.getElementsByClassName('tablinks');
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(' active', '');
     }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
+    // Show the current tab and add active class
     document.getElementById(tabName).style.display = 'block';
     evt.currentTarget.className += ' active';
 }
