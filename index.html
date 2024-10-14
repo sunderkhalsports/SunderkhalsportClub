@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Sunderkhal Sports Club</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <!-- Preloader -->
     <div id="preloader">
-        <div class="spinner"></div>
+        <div class="loader">Loading...</div>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#tournament">Tournaments</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Sunderkhal Sports Club</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hero Section (Parallax) -->
-    <section id="home" class="parallax-section">
-        <h2>Welcome to Sunderkhal Sports Club</h2>
-        <p>Experience the thrill of competition and the joy of community.</p>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Sunderkhal Sports Club, where we believe in nurturing talent and fostering sportsmanship.</p>
     </section>
 
-    <!-- Tournaments Section -->
-    <section id="tournament" class="content-section">
-        <h2 style="color: blue;">Tournaments</h2>
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
-            <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
-            <button class="tablinks" onclick="openTab(event, 'eSports')">eSports</button>
+    <section id="tournaments">
+        <h2>Tournaments</h2>
+        <button class="tablinks" onclick="openTab(event, 'indoor')">Indoor Sports</button>
+        <button class="tablinks" onclick="openTab(event, 'outdoor')">Outdoor Sports</button>
+        <button class="tablinks" onclick="openTab(event, 'esports')">E-Sports</button>
+
+        <div id="indoor" class="tabcontent">
+            <h3>Indoor Sports Tournaments</h3>
+            <p>Join us for exciting tournaments in basketball, badminton, and table tennis.</p>
+            <p>Upcoming Events: Winter Championship, Indoor Cup.</p>
         </div>
-        <div id="Indoor" class="tabcontent">
-            <h3>Indoor Tournaments</h3>
-            <p>Information about indoor tournaments.</p>
+
+        <div id="outdoor" class="tabcontent">
+            <h3>Outdoor Sports Tournaments</h3>
+            <p>Participate in our thrilling outdoor tournaments like cricket, football, and athletics.</p>
+            <p>Upcoming Events: Summer League, Outdoor Challenge.</p>
         </div>
-        <div id="Outdoor" class="tabcontent">
-            <h3>Outdoor Tournaments</h3>
-            <p>Information about outdoor tournaments.</p>
-        </div>
-        <div id="eSports" class="tabcontent">
-            <h3>eSports Tournaments</h3>
-            <p>Information about eSports tournaments.</p>
+
+        <div id="esports" class="tabcontent">
+            <h3>E-Sports Tournaments</h3>
+            <p>Get ready for our E-Sports tournaments featuring popular games like FIFA, PUBG, and Call of Duty.</p>
+            <p>Upcoming Events: E-Sports Championship, Monthly Tournaments.</p>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="content-section">
-        <h2 style="color: green;">About Us</h2>
-        <p style="font-family: 'Georgia', serif;">We are a community-driven sports club located in Sunderkhal...</p>
-        <div class="inverted-text">Changing the game with every match!</div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@sunderkhalsportsclub.com</p>
+        <p>Phone: +1234567890</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section">
-        <h2 style="color: yellow;">Contact Us</h2>
-        <p>Want to know more? Get in touch with us today.</p>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Check out the highlights from our recent tournaments!</p>
+        <div class="gallery-grid">
+            <img src="image1.jpg" alt="Tournament 1">
+            <img src="image2.jpg" alt="Tournament 2">
+            <img src="image3.jpg" alt="Tournament 3">
+            <img src="image4.jpg" alt="Tournament 4">
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+
+                                              </html>
