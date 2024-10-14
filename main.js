@@ -1,37 +1,32 @@
-// Preloader functionality
+// Preloader
 window.addEventListener('load', function () {
-    document.getElementById('preloader').style.display = 'none';
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
 });
 
-// Tab functionality with smooth transitions
+// Tab functionality for Tournaments Section
 function openTab(evt, tabName) {
-    const tabcontent = document.getElementsByClassName("tabcontent");
-    const tablinks = document.getElementsByClassName("tablinks");
+    // Declare all variables
+    let i, tabcontent, tablinks;
 
-    // Hide all tab content
-    for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-        tabcontent[i].style.opacity = 0;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
     }
 
-    // Remove active class from all buttons
-    for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName('tablinks');
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' active', '');
     }
 
-    // Show the selected tab content
-    document.getElementById(tabName).style.display = "block";
-
-    // Smooth fade-in animation
-    setTimeout(function () {
-        document.getElementById(tabName).style.opacity = 1;
-    }, 100);
-
-    // Add active class to the current button
-    evt.currentTarget.className += " active";
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = 'block';
+    evt.currentTarget.className += ' active';
 }
 
-// Auto-open the first tab by default on page load
-document.addEventListener("DOMContentLoaded", function () {
+// Set default tab to "Indoor" on load
+document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.tablinks').click();
 });
