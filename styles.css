@@ -14,135 +14,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #f39c12;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to right, #2c3e50, #3498db);
-}
-
-h1 {
-    font-size: 3rem;
-    color: #f39c12;
-}
-
-/* Parallax Section */
-.parallax-section {
-    background-image: url('your-image.jpg');
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.parallax-content h2 {
-    font-size: 2.5rem;
-    color: #f39c12;
-}
-
-.parallax-content p {
-    font-size: 1.5rem;
-    color: white;
-}
-
-/* Content Sections */
-.content-section {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #1c1c1c;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #b8b8b8;
-}
-
-/* Tabs */
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.tablinks {
-    background-color: #333;
-    color: white;
-    padding: 15px 25px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.tablinks:hover {
-    background-color: #555;
-}
-
-.active {
-    background-color: #f39c12;
-    color: black;
-}
-
-/* Tab Content */
-.tabcontent {
-    display: none;
-    padding: 20px;
-    animation: fadeIn 0.5s;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #999;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 /* Preloader */
 #preloader {
     position: fixed;
@@ -169,4 +40,119 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.home-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #f39c12;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 100px 20px;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b8b8b8;
+}
+
+/* Tabs */
+.tournament-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tablinks {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.tablinks:hover {
+    background-color: #555;
+}
+
+.tablinks.active {
+    background-color: #f39c12;
+    color: black;
+}
+
+/* Tab Content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #999;
 }
