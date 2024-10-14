@@ -5,80 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Preloader -->
     <div id="preloader"></div>
+    <header>
+        <h1>Sunderkhal Sports Club</h1>
+        <nav>
+            <button class="tablinks" onclick="openTab(event, 'Tournaments')">Tournaments</button>
+            <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor Sports</button>
+            <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor Sports</button>
+            <button class="tablinks" onclick="openTab(event, 'Esports')">eSports</button>
+        </nav>
+    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">Sunderkhal Sports Club</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#tournaments">Tournaments</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="invert-text">Welcome to Sunderkhal Sports Club</h1>
-            <p>Your ultimate destination for sports and fitness.</p>
-            <a href="#tournaments" class="cta-button">Join Our Tournaments</a>
-        </div>
-    </section>
-
-    <!-- Tournaments Section -->
-    <section id="tournaments">
-        <h2 class="invert-text">Tournaments</h2>
-        <div class="tabs">
-            <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor</button>
-            <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor</button>
-            <button class="tablinks" onclick="openTab(event, 'ESports')">eSports</button>
+    <main>
+        <div id="Tournaments" class="tabcontent">
+            <h2>Tournaments</h2>
+            <p>Details about various tournaments organized by the club.</p>
         </div>
 
         <div id="Indoor" class="tabcontent">
-            <h3>Indoor Tournaments</h3>
-            <p>Join us for exciting indoor tournaments! Register now for badminton, table tennis, and more.</p>
+            <h2>Indoor Sports</h2>
+            <p>Information about indoor sports available in the club.</p>
         </div>
 
         <div id="Outdoor" class="tabcontent">
-            <h3>Outdoor Tournaments</h3>
-            <p>Participate in our thrilling outdoor tournaments like football, cricket, and athletics!</p>
+            <h2>Outdoor Sports</h2>
+            <p>Information about outdoor sports available in the club.</p>
         </div>
 
-        <div id="ESports" class="tabcontent">
-            <h3>eSports Tournaments</h3>
-            <p>Compete in the latest eSports tournaments. Are you ready to take on the challenge?</p>
+        <div id="Esports" class="tabcontent">
+            <h2>eSports</h2>
+            <p>Information about eSports tournaments organized by the club.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="invert-text">About Us</h2>
-        <p>Sunderkhal Sports Club is dedicated to promoting sports and fitness in our community. We offer a variety of programs and facilities to cater to athletes of all levels.</p>
-        <p>Our club is equipped with modern amenities, trained professionals, and a welcoming environment.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="invert-text">Contact Us</h2>
-        <p>If you have any questions or want to know more about our club, feel free to reach out!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
-    </html>
+</html>
