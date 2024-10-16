@@ -1,110 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
-    <!-- Google Font Link -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="home" id="home">
+    <section class="home">
         <header>
             <a href="#" class="logo">Sunderkhal Sports Club</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#teams">Teams</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </header>
         <div class="content">
             <div class="textBox">
-                <h2>Welcome to <br><span>Sunderkhal Sports Club</span></h2>
-                <p>
-                    Join us to explore the world of sports, fitness, and community spirit. We host regular events 
-                    and competitions in football, cricket, basketball, and more. Your next adventure starts here!
-                </p>
-                <a href="#">Join Us Now</a>
+                <h2>Join <br><span>Your Team</span></h2>
+                <p>Welcome to Sunderkhal Sports Club, where teamwork and dedication lead to success. Explore our events, training programs, and more!</p>
+                <a href="#">Explore Now</a>
             </div>
             <div class="imgBox">
-                <img src="https://source.unsplash.com/500x500/?sports" alt="Sports" class="sports">
+                <img src="https://via.placeholder.com/500" alt="Sports Image" class="sports">
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="https://source.unsplash.com/100x100/?football" onclick="imgSlider('https://source.unsplash.com/500x500/?football'); changeColor('#a18c02');"></li>
-            <li><img src="https://source.unsplash.com/100x100/?cricket" onclick="imgSlider('https://source.unsplash.com/500x500/?cricket'); changeColor('#2236b4');"></li>
-            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#566a3b');"></li>
+            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#a18c02');"></li>
+            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#2236b4');"></li>
+            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#566a3b');"></li>
         </ul>
     </section>
-
-    <!-- Events Section -->
-    <section class="events" id="events">
-        <h2>Upcoming Events</h2>
-        <div class="event-grid">
-            <div class="event-card">
-                <img src="https://source.unsplash.com/400x300/?tournament" alt="Tournament">
-                <h3>Football Tournament</h3>
-                <p>Join us for an exciting football tournament with local teams battling it out for the title!</p>
-            </div>
-            <div class="event-card">
-                <img src="https://source.unsplash.com/400x300/?cricket" alt="Cricket Match">
-                <h3>Cricket Match</h3>
-                <p>Cheer for your favorite teams as they compete in our cricket event!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teams Section -->
-    <section class="teams" id="teams">
-        <h2>Our Teams</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <img src="https://source.unsplash.com/300x300/?team" alt="Football Team">
-                <h3>Football Team</h3>
-                <p>Meet our skilled footballers who have made a name for themselves in local leagues.</p>
-            </div>
-            <div class="team-card">
-                <img src="https://source.unsplash.com/300x300/?basketball" alt="Basketball Team">
-                <h3>Basketball Team</h3>
-                <p>Our basketball team is always ready for the next challenge.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://source.unsplash.com/300x300/?football" alt="Football">
-            <img src="https://source.unsplash.com/300x300/?basketball" alt="Basketball">
-            <img src="https://source.unsplash.com/300x300/?cricket" alt="Cricket">
-            <img src="https://source.unsplash.com/300x300/?sports" alt="Sports">
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>If you'd like to know more about our club or events, feel free to reach out!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
     <script>
         function imgSlider(someThing){
             document.querySelector('.sports').src = someThing;
         }
         function changeColor(color){
-            const sec = document.querySelector('.home');
-            sec.style.background = color;
+            document.querySelector('.home').style.background = color;
         }
     </script>
 </body>
-</html>
+                </html>
