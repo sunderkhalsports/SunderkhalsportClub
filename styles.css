@@ -1,11 +1,15 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -18,12 +22,10 @@ section {
     background: #566a3b;
     transition: 0.5s;
     padding: 20px;
+    flex-direction: column;
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -32,7 +34,7 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #fff;
     font-weight: 600;
 }
@@ -50,14 +52,15 @@ header ul li a {
     font-size: 1em;
 }
 
+/* Content Area */
 .content {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 80px;
+    max-width: 1200px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .content .textBox {
@@ -67,7 +70,7 @@ header ul li a {
 
 .content .textBox h2 {
     color: #fff;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1.4em;
     font-weight: 900;
     text-transform: uppercase;
@@ -96,68 +99,65 @@ header ul li a {
 }
 
 .content .imgBox {
-    width: 100%;
     max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .content .imgBox img {
     width: 100%;
-    max-width: 500px;
+    height: auto;
 }
 
 .thumb {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .thumb li {
     list-style: none;
     margin: 0 10px;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .thumb li img {
     width: 80px;
+    transition: 0.5s;
 }
 
 .thumb li:hover {
     transform: translateY(-10px);
 }
 
-/* Responsive design for mobile devices */
+/* Mobile First Design */
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
+    .content {
+        flex-direction: column;
     }
 
-    header .logo {
-        font-size: 1.2em;
+    header ul {
+        flex-direction: column;
+        text-align: center;
     }
 
-    header ul li a {
-        margin-left: 10px;
-        font-size: 0.9em;
+    header ul li {
+        margin: 10px 0;
     }
 
     .content .textBox h2 {
-        font-size: 2em;
-        line-height: 1.2em;
+        font-size: 1.8em;
     }
 
-    .content .textBox h2 span {
-        font-size: 1.2em;
+    .content .textBox a {
+        font-size: 0.9em;
     }
 
-    .content .imgBox img {
-        max-width: 80%;
+    .content .imgBox {
+        margin-top: 20px;
     }
 
     .thumb li img {
@@ -165,21 +165,32 @@ header ul li a {
     }
 }
 
-/* Responsive design for larger screens */
-@media (min-width: 1200px) {
+/* Tablet and Larger Screens */
+@media (min-width: 769px) and (max-width: 1200px) {
     .content {
-        margin-left: 50px;
+        flex-direction: row;
     }
 
     .content .textBox h2 {
-        font-size: 4em;
+        font-size: 2em;
     }
 
-    .content .imgBox img {
-        max-width: 600px;
+    .content .imgBox {
+        margin-top: 0;
     }
 
     .thumb li img {
-        width: 100px;
+        width: 70px;
     }
 }
+
+/* Large Screens */
+@media (min-width: 1201px) {
+    .content .textBox h2 {
+        font-size: 3em;
+    }
+
+    .thumb li img {
+        width: 90px;
+    }
+        }
