@@ -1,155 +1,128 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
+@font-face {
+    font-family: 'iran_sans_bold';
+    src: url('../Fonts/iran_sans_bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_light';
+    src: url('../Fonts/iran_sans_light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_medi';
+    src: url('../Fonts/iran_sans_medi.woff') format('woff');
+}
+
+*{
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+    font-family: iran_sans_medi;
 }
-
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 2em;
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #566a3b;
+    transition: 0.5s;
 }
-
-nav {
-    background-color: #34495e;
-    padding: 15px;
-    text-align: center;
+header{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-nav a {
-    color: white;
+header .logo{
+    position: relative;
+    font-size: 30px;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
 }
-
-nav a:hover {
-    text-decoration: underline;
+header ul{
+    position: relative;
+    display: flex;
 }
-
-/* Section Styles */
-section {
-    padding: 60px 0;
-    text-align: center;
+header ul li{
+    list-style-type: none;
 }
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 0 0 20px;
-}
-
-/* Sports Cards */
-.sports-card {
+header ul li a{
     display: inline-block;
-    width: 300px;
-    margin: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
 }
-
-.sports-card:hover {
-    transform: translateY(-10px);
-}
-
-.sports-card img {
+.content{
+    position: relative;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
 }
-
-.sports-card h3 {
-    background-color: #2980b9;
-    color: white;
-    padding: 15px;
-    margin: 0;
-}
-
-.sports-card button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1.1em;
-}
-
-.sports-card button:hover {
-    background-color: #2980b9;
-}
-
-/* Modal Styling */
-#modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
+.content .textBox{
+    position: relative;
     max-width: 600px;
-    border-radius: 10px;
 }
-
-.modal-header {
+.content .textBox h2{
+    color: #fff;
+    font-size: 4em;
+    line-height: 1.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.content .textBox h2 span{
     font-size: 2em;
-    margin-bottom: 10px;
-    text-align: center;
 }
-
-.modal-body {
-    font-size: 1.2em;
-    text-align: left;
+.content .textBox p{
+    color: #fff;
 }
-
-.modal-close {
-    display: block;
-    margin: 0 auto;
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #fff;
+    color: #111;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    padding-right: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+.content .imgBox img{
+    max-width: 500px;
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
     cursor: pointer;
-    font-size: 1.2em;
+    transition: 0.5s;
 }
-
-.modal-close:hover {
-    background-color: #c0392b;
+.thumb li img{
+    max-width: 100px;
 }
-
-/* Lazy-loaded images */
-img.lazy {
-    filter: blur(5px);
-    transition: filter 0.5s ease;
+.thumb li:hover{
+    transform: translateY(-15px);
 }
-
-img:not(.lazy) {
-    filter: none;
-}
-
-/* Smooth Scroll Behavior */
-html {
-    scroll-behavior: smooth;
-    }
