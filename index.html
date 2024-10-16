@@ -7,80 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Sunderkhal Sports Club</a>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
-
-    <section id="home" class="home">
+    <section class="home active" id="home">
+        <header>
+            <a href="#" class="logo">Sunderkhal Sports Club</a>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
         <div class="content">
             <div class="textBox">
-                <h2>Welcome to <span>Sunderkhal Sports Club</span></h2>
-                <p>Your destination for sports, fitness, and community.</p>
-                <a href="#about">Learn More</a>
+                <h2>Welcome to <br><span>Sunderkhal Sports Club</span></h2>
+                <p>
+                    Join us in celebrating sportsmanship and teamwork at the heart of Sunderkhal. 
+                    From local tournaments to community engagement, we’re here to bring out the best in our athletes.
+                </p>
+                <a href="#events">Explore Events</a>
             </div>
             <div class="imgBox">
-                <img src="your-image-url.jpg" alt="Sports Club Image">
+                <img src="img/sports1.png" alt="Sports Club" class="sports">
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are a sports club dedicated to promoting sports in Sunderkhal. Our mission is to provide quality sports facilities for all.</p>
-        <div class="color-options">
-            <input type="checkbox" id="about-toggle" class="toggle">
-            <label for="about-toggle" class="color-btn">Reveal More</label>
-        </div>
-        <div class="hidden-info">
-            <p id="about-info">Sunderkhal Sports Club offers training programs for youth, adults, and seniors. We specialize in football, cricket, and other community activities.</p>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <p>We offer coaching, sports events, and facility rentals.</p>
-        <div class="color-options">
-            <input type="checkbox" id="services-toggle" class="toggle">
-            <label for="services-toggle" class="color-btn">Reveal More</label>
-        </div>
-        <div class="hidden-info">
-            <p id="services-info">Our services include expert coaching in football and cricket, organizing sports tournaments, and renting sports equipment and grounds.</p>
+    <section class="about" id="about">
+        <div class="content">
+            <div class="textBox">
+                <h2>About Us</h2>
+                <p>
+                    The Sunderkhal Sports Club is dedicated to promoting physical fitness, discipline, and sportsmanship through a variety of sports and events.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="events" class="events">
-        <h2>Upcoming Events</h2>
-        <p>Stay tuned for the latest events in our sports calendar.</p>
-        <div class="color-options">
-            <input type="checkbox" id="events-toggle" class="toggle">
-            <label for="events-toggle" class="color-btn">Reveal More</label>
-        </div>
-        <div class="hidden-info">
-            <p id="events-info">We host annual football and cricket tournaments along with community fitness challenges.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, reach out to us via email or phone.</p>
-        <div class="color-options">
-            <input type="checkbox" id="contact-toggle" class="toggle">
-            <label for="contact-toggle" class="color-btn">Reveal More</label>
-        </div>
-        <div class="hidden-info">
-            <p id="contact-info">Email: contact@sunderkhalsportsclub.com | Phone: +91-9876543210</p>
+    <section class="events" id="events">
+        <div class="content">
+            <div class="textBox">
+                <h2>Upcoming Events</h2>
+                <p>
+                    Stay tuned for our upcoming sports events and tournaments. We host football, cricket, and athletics competitions regularly.
+                </p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
-    </footer>
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="textBox">
+                <h2>Contact Us</h2>
+                <p>
+                    Get in touch with us to learn more about membership, sponsorships, or event participation.
+                </p>
+                <a href="mailto:support@sportsclub.com">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="color-options">
+        <button class="color-btn" data-color="#566a3b">Green</button>
+        <button class="color-btn" data-color="#2236b4">Blue</button>
+        <button class="color-btn" data-color="#a18c02">Yellow</button>
+    </div>
 </body>
-                </html>
+    </html>
