@@ -4,125 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunderkhal Sports Club</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="home" id="section1">
-        <header>
-            <a href="#" class="logo">Sunderkhal Sports Club</a>
-            <ul>
-                <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">About</a></li>
-                <li><a href="#section3">Services</a></li>
-                <li><a href="#section4">Events</a></li>
-                <li><a href="#section5">Contact</a></li>
-            </ul>
-        </header>
+    <header>
+        <a href="#" class="logo">Sunderkhal Sports Club</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section id="home" class="home">
         <div class="content">
             <div class="textBox">
-                <h2>Join <br><span>Your Team</span></h2>
-                <p>Welcome to Sunderkhal Sports Club, where teamwork and dedication lead to success. Explore our events, training programs, and more!</p>
-                <a href="#">Explore Now</a>
+                <h2>Welcome to <span>Sunderkhal Sports Club</span></h2>
+                <p>Your destination for sports, fitness, and community.</p>
+                <a href="#about">Learn More</a>
             </div>
             <div class="imgBox">
-                <img src="https://via.placeholder.com/500" alt="Sports Image" class="sports">
+                <img src="your-image-url.jpg" alt="Sports Club Image">
             </div>
         </div>
-        <ul class="thumb">
-            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#a18c02', 'section1');"></li>
-            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#2236b4', 'section1');"></li>
-            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#566a3b', 'section1');"></li>
-        </ul>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="section2">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Sunderkhal Sports Club was founded to encourage youth participation in various sports activities. Our mission is to nurture talent and promote healthy competition.</p>
-        </div>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a sports club dedicated to promoting sports in Sunderkhal. Our mission is to provide quality sports facilities for all.</p>
         <div class="color-options">
-            <button onclick="revealInfo('#ff6347', 'about-info-1')">More About Us</button>
-            <button onclick="revealInfo('#4682b4', 'about-info-2')">Our Vision</button>
-            <button onclick="revealInfo('#32cd32', 'about-info-3')">Our Mission</button>
+            <input type="checkbox" id="about-toggle" class="toggle">
+            <label for="about-toggle" class="color-btn">Reveal More</label>
         </div>
         <div class="hidden-info">
-            <p id="about-info-1" class="info-text">We provide world-class coaching and organize various sporting events throughout the year to promote talent.</p>
-            <p id="about-info-2" class="info-text">Our vision is to create a strong community of sports enthusiasts and provide opportunities for youth empowerment.</p>
-            <p id="about-info-3" class="info-text">Our mission is to foster a culture of sportsmanship, teamwork, and excellence among youth athletes in the region.</p>
+            <p id="about-info">Sunderkhal Sports Club offers training programs for youth, adults, and seniors. We specialize in football, cricket, and other community activities.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="section3">
-        <div class="content">
-            <h2>Our Services</h2>
-            <p>We offer professional coaching, training sessions, and organize sports events to boost athletic performance and community participation.</p>
-        </div>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <p>We offer coaching, sports events, and facility rentals.</p>
         <div class="color-options">
-            <button onclick="revealInfo('#ffcc00', 'service-info-1')">Training</button>
-            <button onclick="revealInfo('#ff4500', 'service-info-2')">Coaching</button>
-            <button onclick="revealInfo('#00bfff', 'service-info-3')">Competitions</button>
+            <input type="checkbox" id="services-toggle" class="toggle">
+            <label for="services-toggle" class="color-btn">Reveal More</label>
         </div>
         <div class="hidden-info">
-            <p id="service-info-1" class="info-text">We offer top-notch training sessions led by professional coaches who specialize in various sports.</p>
-            <p id="service-info-2" class="info-text">Our coaching programs are designed to improve both individual and team performance.</p>
-            <p id="service-info-3" class="info-text">We host competitions and tournaments that offer an opportunity for athletes to showcase their talent.</p>
+            <p id="services-info">Our services include expert coaching in football and cricket, organizing sports tournaments, and renting sports equipment and grounds.</p>
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section class="events" id="section4">
-        <div class="content">
-            <h2>Upcoming Events</h2>
-            <p>Join us in our upcoming tournaments and competitions. Whether you're a player or a fan, there's something for everyone!</p>
-        </div>
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <p>Stay tuned for the latest events in our sports calendar.</p>
         <div class="color-options">
-            <button onclick="revealInfo('#e91e63', 'event-info-1')">Next Tournament</button>
-            <button onclick="revealInfo('#9c27b0', 'event-info-2')">Annual Marathon</button>
-            <button onclick="revealInfo('#3f51b5', 'event-info-3')">Summer Camp</button>
+            <input type="checkbox" id="events-toggle" class="toggle">
+            <label for="events-toggle" class="color-btn">Reveal More</label>
         </div>
         <div class="hidden-info">
-            <p id="event-info-1" class="info-text">Our next football tournament will be held in November. Register now to secure your spot.</p>
-            <p id="event-info-2" class="info-text">The Annual Marathon will take place in December, featuring categories for all ages.</p>
-            <p id="event-info-3" class="info-text">Our Summer Camp kicks off in June, offering training sessions in various sports.</p>
+            <p id="events-info">We host annual football and cricket tournaments along with community fitness challenges.</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="section5">
-        <div class="content">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or want to get involved, feel free to reach out to us. We’re always here to help!</p>
-        </div>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, reach out to us via email or phone.</p>
         <div class="color-options">
-            <button onclick="revealInfo('#8bc34a', 'contact-info-1')">Get in Touch</button>
-            <button onclick="revealInfo('#00bcd4', 'contact-info-2')">Join Our Club</button>
-            <button onclick="revealInfo('#ff9800', 'contact-info-3')">Volunteer With Us</button>
+            <input type="checkbox" id="contact-toggle" class="toggle">
+            <label for="contact-toggle" class="color-btn">Reveal More</label>
         </div>
         <div class="hidden-info">
-            <p id="contact-info-1" class="info-text">You can contact us via email at info@sunderkhalsportsclub.com or call us at 123-456-7890.</p>
-            <p id="contact-info-2" class="info-text">To join the club, fill out the application form on our website or visit us in person.</p>
-            <p id="contact-info-3" class="info-text">We're always looking for passionate volunteers. If you want to contribute, reach out to us!</p>
+            <p id="contact-info">Email: contact@sunderkhalsportsclub.com | Phone: +91-9876543210</p>
         </div>
     </section>
 
-    <script>
-        function imgSlider(someThing) {
-            document.querySelector('.sports').src = someThing;
-        }
-
-        function changeColor(color, sectionId) {
-            document.getElementById(sectionId).style.background = color;
-        }
-
-        function revealInfo(color, infoId) {
-            changeColor(color, infoId.substring(0, infoId.indexOf('-')));
-            document.querySelectorAll('.info-text').forEach(el => el.style.display = 'none');
-            document.getElementById(infoId).style.display = 'block';
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+    </footer>
 </body>
-                    </html>
+                </html>
