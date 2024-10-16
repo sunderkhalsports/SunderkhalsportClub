@@ -1,116 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elite Sports Club - World-class sports facilities and programs">
-    <title>Elite Sports Club</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <a href="#home" class="logo">EliteSports</a>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#sports">Sports</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#contact">Contact</a></li>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="home">
+            <header>
+                <a href="#" class="logo">Sports</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Arrival</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>That's what<br><span>I like</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Quod voluptatem rem, corporis magni adipisci sapiente cum 
+                        amet autem officiis voluptatibus nihil vitae consequatur 
+                        minus nesciunt tempore laudantium alias aliquam ducimus!
+                    </p>
+                    <a href="#">View All Products</a>
+                </div>
+                <div class="imgBox">
+                    <img src="img/3.png" alt="" class="sports">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="img/1.png" onclick="imgSlider('img/1.png'); changeColor('#a18c02');"></li>
+                <li><img src="img/4.png" onclick="imgSlider('img/4.png'); changeColor('#2236b4');"></li>
+                <li><img src="img/3.png" onclick="imgSlider('img/3.png'); changeColor('#566a3b');"></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section with Animated Text -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">Welcome to Elite Sports Club</h1>
-            <p>Your journey to excellence starts here</p>
-            <a href="#about" class="btn btn-animate">Learn More</a>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="about-us">
-        <h2>About Us</h2>
-        <p>Elite Sports Club offers cutting-edge training, top-tier facilities, and a community that fosters excellence...</p>
-        <div class="about-img-container">
-            <img src="club-facility.jpg" alt="Club Facilities" class="about-img">
-        </div>
-    </section>
-
-    <!-- Sports & Programs Section -->
-    <section id="sports" class="sports-programs">
-        <h2>Sports & Programs</h2>
-        <div class="sports-container">
-            <div class="sport" onclick="openModal('basketball')">
-                <img src="basketball.jpg" alt="Basketball">
-                <h3>Basketball</h3>
-            </div>
-            <div class="sport" onclick="openModal('tennis')">
-                <img src="tennis.jpg" alt="Tennis">
-                <h3>Tennis</h3>
-            </div>
-            <div class="sport" onclick="openModal('swimming')">
-                <img src="swimming.jpg" alt="Swimming">
-                <h3>Swimming</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Membership Plans Section -->
-    <section id="membership" class="membership-plans">
-        <h2>Membership Plans</h2>
-        <div class="pricing-table">
-            <div class="plan">
-                <h3>Basic</h3>
-                <p>$50/month</p>
-                <ul>
-                    <li>Access to Gym</li>
-                    <li>Free Group Classes</li>
-                </ul>
-                <a href="#" class="btn btn-animate">Join Now</a>
-            </div>
-            <div class="plan">
-                <h3>Premium</h3>
-                <p>$100/month</p>
-                <ul>
-                    <li>All Basic Benefits</li>
-                    <li>Access to All Sports</li>
-                    <li>Personal Training</li>
-                </ul>
-                <a href="#" class="btn btn-animate">Join Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-us">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/YOUREMAIL" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-animate">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Elite Sports Club. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Modals for Detailed Information (Hidden by default) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 id="modal-title">Program Details</h3>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
+        </section>
+    </body>
 </html>
+
+<script>
+    function imgSlider(someThing){
+        document.querySelector('.sports').src = someThing;
+    }
+    function changeColor(color){
+        const sec = document.querySelector('.home');
+        sec.style.background = color;
+    }
+                                                                                                       </script>
