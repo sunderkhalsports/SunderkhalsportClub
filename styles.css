@@ -1,90 +1,163 @@
-/* styles.css */
-
-/* Set a gradient background */
+/* General Styles */
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Preloader styles */
-#preloader {
+header {
+    background-color: #333;
+    padding: 10px 0;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff7f50;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#preloader:after {
-    content: '';
-    width: 50px;
-    height: 50px;
-    border: 5px solid white;
-    border-top: 5px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Header styles */
-header {
     text-align: center;
-    margin: 20px 0;
 }
 
-/* Tab button styles */
-.tablinks {
-    background-color: #1d1d1d;
-    border: none;
-    color: white;
-    padding: 14px 20px;
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    animation: fadeInUp 2s ease;
+}
+
+.hero-content p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Sports Section */
+.sports-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.sport {
+    width: 30%;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.tablinks:hover {
-    background-color: #575757;
+.sport img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.sport h3 {
+    font-size: 1.5rem;
+}
+
+.sport:hover {
     transform: scale(1.05);
 }
 
-/* Tab content styles */
-.tabcontent {
+/* Modal Styles */
+.modal {
     display: none;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* Additional content section styles */
-.additional-content, .more-info, .testimonials {
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
     padding: 20px;
+    width: 60%;
+    border-radius: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Inverted text styles */
-.invert {
-    color: #ffcc00; /* Light yellow for inverted text */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+.close {
+    color: #333;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
 }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .sport {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    }
