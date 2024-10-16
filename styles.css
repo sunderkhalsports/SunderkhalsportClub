@@ -7,15 +7,21 @@
     font-family: 'Iranian Sans', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 section {
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background: #566a3b;
     transition: 0.5s;
+    padding: 20px;
 }
 
 header {
@@ -23,23 +29,22 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo {
-    position: relative;
-    font-size: 30px;
-    text-decoration: none;
+    font-size: 24px;
     color: #fff;
     font-weight: 600;
+    text-decoration: none;
 }
 
 header ul {
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
 header ul li {
@@ -50,44 +55,48 @@ header ul li a {
     display: inline-block;
     color: #fff;
     font-weight: 400;
-    margin-left: 40px;
+    margin-left: 20px;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .content {
     position: relative;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .content .textBox {
-    position: relative;
     max-width: 600px;
+    padding: 20px;
 }
 
 .content .textBox h2 {
     color: #fff;
-    font-size: 4em;
-    line-height: 1.7em;
+    font-size: 3em;
+    line-height: 1.2em;
     font-weight: 900;
     text-transform: uppercase;
 }
 
 .content .textBox h2 span {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .content .textBox p {
     color: #fff;
+    margin-top: 10px;
+    font-size: 1em;
 }
 
 .content .textBox a {
     display: inline-block;
     margin-top: 20px;
-    padding: 8px 20px;
+    padding: 10px 20px;
     background: #fff;
     color: #111;
     border-radius: 40px;
@@ -98,15 +107,15 @@ header ul li a {
 }
 
 .content .imgBox {
-    width: 600px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
-    padding-right: 10px;
-    margin-top: 20px;
     justify-content: flex-end;
+    padding: 10px;
 }
 
 .content .imgBox img {
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .thumb {
@@ -120,15 +129,76 @@ header ul li a {
 .thumb li {
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .thumb li img {
-    max-width: 100px;
+    max-width: 80px;
 }
 
 .thumb li:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
     }
+    header ul li a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .content .textBox h2 {
+        font-size: 2.5em;
+    }
+    .content .textBox h2 span {
+        font-size: 1.3em;
+    }
+    .content .textBox p {
+        font-size: 0.9em;
+    }
+    .content .imgBox {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    header .logo {
+        font-size: 18px;
+    }
+    header ul li a {
+        font-size: 12px;
+        margin-left: 8px;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .content .textBox {
+        margin-bottom: 20px;
+    }
+    .content .textBox h2 {
+        font-size: 2em;
+    }
+    .content .textBox h2 span {
+        font-size: 1.2em;
+    }
+    .content .textBox p {
+        font-size: 0.8em;
+    }
+    .thumb {
+        flex-wrap: wrap;
+        bottom: 10px;
+    }
+    .thumb li {
+        margin: 0 5px;
+    }
+}
