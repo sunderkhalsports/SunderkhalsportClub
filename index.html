@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="home">
+    <section class="home" id="section1">
         <header>
             <a href="#" class="logo">Sunderkhal Sports Club</a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">About</a></li>
+                <li><a href="#section3">Services</a></li>
+                <li><a href="#section4">Events</a></li>
+                <li><a href="#section5">Contact</a></li>
             </ul>
         </header>
         <div class="content">
@@ -32,18 +31,98 @@
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#a18c02');"></li>
-            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#2236b4');"></li>
-            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#566a3b');"></li>
+            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#a18c02', 'section1');"></li>
+            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#2236b4', 'section1');"></li>
+            <li><img src="https://via.placeholder.com/100" onclick="imgSlider('https://via.placeholder.com/500'); changeColor('#566a3b', 'section1');"></li>
         </ul>
     </section>
+
+    <!-- About Section -->
+    <section class="about" id="section2">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Sunderkhal Sports Club was founded to encourage youth participation in various sports activities. Our mission is to nurture talent and promote healthy competition.</p>
+        </div>
+        <div class="color-options">
+            <button onclick="revealInfo('#ff6347', 'about-info-1')">More About Us</button>
+            <button onclick="revealInfo('#4682b4', 'about-info-2')">Our Vision</button>
+            <button onclick="revealInfo('#32cd32', 'about-info-3')">Our Mission</button>
+        </div>
+        <div class="hidden-info">
+            <p id="about-info-1" class="info-text">We provide world-class coaching and organize various sporting events throughout the year to promote talent.</p>
+            <p id="about-info-2" class="info-text">Our vision is to create a strong community of sports enthusiasts and provide opportunities for youth empowerment.</p>
+            <p id="about-info-3" class="info-text">Our mission is to foster a culture of sportsmanship, teamwork, and excellence among youth athletes in the region.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="section3">
+        <div class="content">
+            <h2>Our Services</h2>
+            <p>We offer professional coaching, training sessions, and organize sports events to boost athletic performance and community participation.</p>
+        </div>
+        <div class="color-options">
+            <button onclick="revealInfo('#ffcc00', 'service-info-1')">Training</button>
+            <button onclick="revealInfo('#ff4500', 'service-info-2')">Coaching</button>
+            <button onclick="revealInfo('#00bfff', 'service-info-3')">Competitions</button>
+        </div>
+        <div class="hidden-info">
+            <p id="service-info-1" class="info-text">We offer top-notch training sessions led by professional coaches who specialize in various sports.</p>
+            <p id="service-info-2" class="info-text">Our coaching programs are designed to improve both individual and team performance.</p>
+            <p id="service-info-3" class="info-text">We host competitions and tournaments that offer an opportunity for athletes to showcase their talent.</p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="section4">
+        <div class="content">
+            <h2>Upcoming Events</h2>
+            <p>Join us in our upcoming tournaments and competitions. Whether you're a player or a fan, there's something for everyone!</p>
+        </div>
+        <div class="color-options">
+            <button onclick="revealInfo('#e91e63', 'event-info-1')">Next Tournament</button>
+            <button onclick="revealInfo('#9c27b0', 'event-info-2')">Annual Marathon</button>
+            <button onclick="revealInfo('#3f51b5', 'event-info-3')">Summer Camp</button>
+        </div>
+        <div class="hidden-info">
+            <p id="event-info-1" class="info-text">Our next football tournament will be held in November. Register now to secure your spot.</p>
+            <p id="event-info-2" class="info-text">The Annual Marathon will take place in December, featuring categories for all ages.</p>
+            <p id="event-info-3" class="info-text">Our Summer Camp kicks off in June, offering training sessions in various sports.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="section5">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to get involved, feel free to reach out to us. We’re always here to help!</p>
+        </div>
+        <div class="color-options">
+            <button onclick="revealInfo('#8bc34a', 'contact-info-1')">Get in Touch</button>
+            <button onclick="revealInfo('#00bcd4', 'contact-info-2')">Join Our Club</button>
+            <button onclick="revealInfo('#ff9800', 'contact-info-3')">Volunteer With Us</button>
+        </div>
+        <div class="hidden-info">
+            <p id="contact-info-1" class="info-text">You can contact us via email at info@sunderkhalsportsclub.com or call us at 123-456-7890.</p>
+            <p id="contact-info-2" class="info-text">To join the club, fill out the application form on our website or visit us in person.</p>
+            <p id="contact-info-3" class="info-text">We're always looking for passionate volunteers. If you want to contribute, reach out to us!</p>
+        </div>
+    </section>
+
     <script>
-        function imgSlider(someThing){
+        function imgSlider(someThing) {
             document.querySelector('.sports').src = someThing;
         }
-        function changeColor(color){
-            document.querySelector('.home').style.background = color;
+
+        function changeColor(color, sectionId) {
+            document.getElementById(sectionId).style.background = color;
+        }
+
+        function revealInfo(color, infoId) {
+            changeColor(color, infoId.substring(0, infoId.indexOf('-')));
+            document.querySelectorAll('.info-text').forEach(el => el.style.display = 'none');
+            document.getElementById(infoId).style.display = 'block';
         }
     </script>
 </body>
-                </html>
+                    </html>
