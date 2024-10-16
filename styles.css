@@ -1,6 +1,4 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +6,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Home Section */
 section {
     position: relative;
     width: 100%;
@@ -18,12 +23,10 @@ section {
     background: #566a3b;
     transition: 0.5s;
     padding: 20px;
+    flex-direction: column;
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -32,7 +35,7 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #fff;
     font-weight: 600;
 }
@@ -51,135 +54,85 @@ header ul li a {
 }
 
 .content {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 80px;
-}
-
-.content .textBox {
-    max-width: 600px;
-    padding: 20px;
-}
-
-.content .textBox h2 {
-    color: #fff;
-    font-size: 3em;
-    line-height: 1.4em;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.content .textBox h2 span {
-    font-size: 1.5em;
-}
-
-.content .textBox p {
-    color: #fff;
-    margin: 20px 0;
-}
-
-.content .textBox a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #fff;
-    color: #111;
-    border-radius: 40px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.content .imgBox {
+    max-width: 1200px;
+    margin-top: 50px;
     width: 100%;
-    max-width: 500px;
+}
+
+/* Events Section */
+.events, .teams, .gallery, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.events h2, .teams h2, .gallery h2, .contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.event-grid, .team-grid, .gallery-grid {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.content .imgBox img {
-    width: 100%;
-    max-width: 500px;
-}
-
-.thumb {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    display: flex;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.thumb li {
-    list-style: none;
-    margin: 0 10px;
+.event-card, .team-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.event-card img, .team-card img, .gallery-grid img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact form input, .contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background: #566a3b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.5s;
 }
 
-.thumb li img {
-    width: 80px;
-}
-
-.thumb li:hover {
-    transform: translateY(-10px);
-}
-
-/* Responsive design for mobile devices */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
+    header ul {
+        flex-direction: column;
+        text-align: center;
     }
-
-    header .logo {
-        font-size: 1.2em;
-    }
-
-    header ul li a {
-        margin-left: 10px;
-        font-size: 0.9em;
-    }
-
-    .content .textBox h2 {
-        font-size: 2em;
-        line-height: 1.2em;
-    }
-
-    .content .textBox h2 span {
-        font-size: 1.2em;
-    }
-
-    .content .imgBox img {
-        max-width: 80%;
-    }
-
-    .thumb li img {
-        width: 60px;
-    }
-}
-
-/* Responsive design for larger screens */
-@media (min-width: 1200px) {
+    
     .content {
-        margin-left: 50px;
+        flex-direction: column;
     }
 
-    .content .textBox h2 {
-        font-size: 4em;
-    }
-
-    .content .imgBox img {
-        max-width: 600px;
-    }
-
-    .thumb li img {
-        width: 100px;
+    .event-grid, .team-grid, .gallery-grid {
+        flex-direction: column;
     }
     }
