@@ -7,159 +7,150 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
+body {
     overflow-x: hidden;
 }
 
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
 header {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 0; 
     left: 0;
     width: 100%;
-    padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    padding: 15px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 }
 
 header .logo {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 30px;
     color: #fff;
-    text-decoration: none;
+    font-weight: 900;
 }
 
 header ul {
-    list-style: none;
     display: flex;
 }
 
 header ul li {
-    margin-left: 20px;
+    list-style: none;
 }
 
 header ul li a {
+    display: inline-block;
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
     font-weight: 500;
-    transition: color 0.3s;
+    margin-left: 40px;
+    text-decoration: none;
 }
 
-header ul li a:hover {
-    color: #ffd700;
+header ul li a.active {
+    border-bottom: 2px solid #fff;
 }
 
-section {
+.content {
     width: 100%;
-    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 20px;
 }
 
-.home {
-    background-color: #566a3b;
+.content .textBox h2 {
     color: #fff;
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: 900;
 }
 
-.about, .services, .events, .contact {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
-}
-
-.textBox h2 {
-    font-size: 3rem;
+.content .textBox p {
     color: #fff;
-}
-
-.textBox h2 span {
-    color: #ffd700;
-}
-
-.textBox p {
-    margin: 20px 0;
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.textBox a {
-    padding: 12px 25px;
-    background: #ffd700;
-    color: #333;
-    font-weight: bold;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.textBox a:hover {
-    background: #333;
-    color: #ffd700;
-}
-
-.imgBox {
-    margin-top: 30px;
-}
-
-.imgBox img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-p {
-    color: #666;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.color-options {
-    margin-top: 30px;
-}
-
-.color-options .toggle {
-    display: none;
-}
-
-.color-options label {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.color-options label:hover {
-    background-color: #ffd700;
-}
-
-.hidden-info {
-    display: none;
-}
-
-.toggle:checked + label + .hidden-info {
-    display: block;
-}
-
-.hidden-info p {
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #fff;
+    color: #111;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.imgBox img {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+/* Color Options */
+.color-options {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.color-btn {
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header ul li a {
+        margin-left: 20px;
+    }
+
+    .content .textBox h2 {
+        font-size: 2.5em;
+    }
+
+    .imgBox img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .content .textBox h2 {
+        font-size: 2em;
+    }
+
+    .imgBox img {
+        max-width: 250px;
+    }
 }
