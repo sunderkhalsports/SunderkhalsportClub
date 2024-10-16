@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #f0f0f0;
 }
 
 section {
@@ -16,8 +17,8 @@ section {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: #566a3b;
     transition: 0.5s;
@@ -25,14 +26,13 @@ section {
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #3a4c23;
 }
 
 header .logo {
@@ -44,10 +44,6 @@ header .logo {
 
 header ul {
     display: flex;
-    flex-wrap: wrap;
-}
-
-header ul li {
     list-style-type: none;
 }
 
@@ -61,13 +57,13 @@ header ul li a {
 }
 
 .content {
-    position: relative;
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
 }
 
 .content .textBox {
@@ -77,7 +73,7 @@ header ul li a {
 
 .content .textBox h2 {
     color: #fff;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1.2em;
     font-weight: 900;
     text-transform: uppercase;
@@ -107,35 +103,35 @@ header ul li a {
 }
 
 .content .imgBox {
-    width: 100%;
     max-width: 500px;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .content .imgBox img {
     max-width: 100%;
+    border-radius: 15px;
 }
 
 .thumb {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
+    margin-top: 20px;
     display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .thumb li {
     list-style: none;
     display: inline-block;
-    margin: 0 10px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .thumb li img {
     max-width: 80px;
+    border-radius: 10px;
 }
 
 .thumb li:hover {
@@ -144,22 +140,37 @@ header ul li a {
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
+@media (min-width: 769px) {
+    section {
+        flex-direction: row;
+        justify-content: space-between;
     }
-    header ul li a {
-        font-size: 14px;
-        margin-left: 10px;
+    .content {
+        flex-direction: row;
+        text-align: left;
+    }
+    .content .textBox {
+        flex: 1;
+        padding-right: 20px;
+    }
+    .content .imgBox {
+        flex: 1;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+    }
+    header ul li {
+        margin-top: 10px;
     }
     .content .textBox h2 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
     .content .textBox h2 span {
         font-size: 1.3em;
-    }
-    .content .textBox p {
-        font-size: 0.9em;
     }
     .content .imgBox {
         justify-content: center;
@@ -167,38 +178,33 @@ header ul li a {
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
     header .logo {
         font-size: 18px;
     }
+    header ul {
+        flex-direction: column;
+    }
     header ul li a {
         font-size: 12px;
-        margin-left: 8px;
     }
     .content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-    }
-    .content .textBox {
-        margin-bottom: 20px;
     }
     .content .textBox h2 {
-        font-size: 2em;
-    }
-    .content .textBox h2 span {
-        font-size: 1.2em;
+        font-size: 1.8em;
     }
     .content .textBox p {
-        font-size: 0.8em;
+        font-size: 0.9em;
+    }
+    .content .imgBox {
+        margin-top: 10px;
     }
     .thumb {
         flex-wrap: wrap;
-        bottom: 10px;
+        gap: 10px;
     }
-    .thumb li {
-        margin: 0 5px;
+    .thumb li img {
+        max-width: 60px;
     }
-}
+    }
