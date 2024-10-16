@@ -3,83 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunderkhal Sports Club</title>
+    <meta name="description" content="Elite Sports Club - World-class sports facilities and programs">
+    <title>Elite Sports Club</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="preloader"></div>
+
+    <!-- Navigation -->
     <header>
-        <h1>Sunderkhal Sports Club</h1>
         <nav>
-            <button class="tablinks" onclick="openTab(event, 'Tournaments')">Tournaments</button>
-            <button class="tablinks" onclick="openTab(event, 'Indoor')">Indoor Sports</button>
-            <button class="tablinks" onclick="openTab(event, 'Outdoor')">Outdoor Sports</button>
-            <button class="tablinks" onclick="openTab(event, 'Esports')">eSports</button>
+            <a href="#home" class="logo">EliteSports</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <div id="Tournaments" class="tabcontent">
-            <h2>Tournaments</h2>
-            <p>Details about various tournaments organized by the club.</p>
-            <h3>Upcoming Tournaments</h3>
-            <ul>
-                <li>Winter League - January 15, 2025</li>
-                <li>Spring Championship - March 20, 2025</li>
-                <li>Summer Fest - June 25, 2025</li>
-            </ul>
+    <!-- Hero Section with Animated Text -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Welcome to Elite Sports Club</h1>
+            <p>Your journey to excellence starts here</p>
+            <a href="#about" class="btn btn-animate">Learn More</a>
         </div>
+    </section>
 
-        <div id="Indoor" class="tabcontent">
-            <h2>Indoor Sports</h2>
-            <p>Information about indoor sports available in the club.</p>
-            <p class="invert">Join us for exciting games of badminton, squash, and table tennis.</p>
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <h2>About Us</h2>
+        <p>Elite Sports Club offers cutting-edge training, top-tier facilities, and a community that fosters excellence...</p>
+        <div class="about-img-container">
+            <img src="club-facility.jpg" alt="Club Facilities" class="about-img">
         </div>
+    </section>
 
-        <div id="Outdoor" class="tabcontent">
-            <h2>Outdoor Sports</h2>
-            <p>Information about outdoor sports available in the club.</p>
-            <p>We offer football, cricket, and basketball facilities.</p>
-            <p class="invert">Sign up for our football league today!</p>
+    <!-- Sports & Programs Section -->
+    <section id="sports" class="sports-programs">
+        <h2>Sports & Programs</h2>
+        <div class="sports-container">
+            <div class="sport" onclick="openModal('basketball')">
+                <img src="basketball.jpg" alt="Basketball">
+                <h3>Basketball</h3>
+            </div>
+            <div class="sport" onclick="openModal('tennis')">
+                <img src="tennis.jpg" alt="Tennis">
+                <h3>Tennis</h3>
+            </div>
+            <div class="sport" onclick="openModal('swimming')">
+                <img src="swimming.jpg" alt="Swimming">
+                <h3>Swimming</h3>
+            </div>
         </div>
+    </section>
 
-        <div id="Esports" class="tabcontent">
-            <h2>eSports</h2>
-            <p>Information about eSports tournaments organized by the club.</p>
-            <p>Join our competitive gaming community!</p>
-            <p class="invert">Participate in our monthly eSports tournaments.</p>
+    <!-- Membership Plans Section -->
+    <section id="membership" class="membership-plans">
+        <h2>Membership Plans</h2>
+        <div class="pricing-table">
+            <div class="plan">
+                <h3>Basic</h3>
+                <p>$50/month</p>
+                <ul>
+                    <li>Access to Gym</li>
+                    <li>Free Group Classes</li>
+                </ul>
+                <a href="#" class="btn btn-animate">Join Now</a>
+            </div>
+            <div class="plan">
+                <h3>Premium</h3>
+                <p>$100/month</p>
+                <ul>
+                    <li>All Basic Benefits</li>
+                    <li>Access to All Sports</li>
+                    <li>Personal Training</li>
+                </ul>
+                <a href="#" class="btn btn-animate">Join Now</a>
+            </div>
         </div>
+    </section>
 
-        <section class="additional-content">
-            <h2>Join Us Today!</h2>
-            <p>Become a member of Sunderkhal Sports Club and enjoy exclusive benefits.</p>
-            <p>Our community offers various sports activities and tournaments, catering to all age groups.</p>
-            <p>Don’t miss out on the fun and competition!</p>
-            <p class="invert">We welcome everyone to our vibrant community.</p>
-        </section>
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/YOUREMAIL" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-animate">Send Message</button>
+        </form>
+    </section>
 
-        <section class="more-info">
-            <h2>More Information</h2>
-            <p>Our club provides coaching and training for all sports.</p>
-            <p>Regular fitness classes are held every week.</p>
-            <p>Join us for our annual sports day to showcase your skills!</p>
-            <p class="invert">Follow us on social media for updates!</p>
-        </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elite Sports Club. All Rights Reserved.</p>
+    </footer>
 
-        <section class="testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>"Joining Sunderkhal Sports Club has been one of the best decisions of my life!"</p>
-                <footer>- Alex, Club Member</footer>
-            </blockquote>
-            <blockquote>
-                <p>"The community and support are incredible here!"</p>
-                <footer>- Maya, Athlete</footer>
-            </blockquote>
-        </section>
-    </main>
+    <!-- Modals for Detailed Information (Hidden by default) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Program Details</h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
-    </html>
+</html>
