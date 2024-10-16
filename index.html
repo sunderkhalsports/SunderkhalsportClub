@@ -7,69 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="home active" id="home">
+    <section class="home">
         <header>
             <a href="#" class="logo">Sunderkhal Sports Club</a>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </header>
         <div class="content">
             <div class="textBox">
-                <h2>Welcome to <br><span>Sunderkhal Sports Club</span></h2>
+                <h2>Welcome to<br><span>Sunderkhal Sports Club</span></h2>
                 <p>
-                    Join us in celebrating sportsmanship and teamwork at the heart of Sunderkhal. 
-                    From local tournaments to community engagement, we’re here to bring out the best in our athletes.
+                    We are a local community club promoting sports, fitness, and a healthy lifestyle 
+                    in the village of Sunderkhal. Join us for events, training, and a celebration of sportsmanship!
                 </p>
-                <a href="#events">Explore Events</a>
+                <a href="#">View Upcoming Events</a>
             </div>
             <div class="imgBox">
-                <img src="img/sports1.png" alt="Sports Club" class="sports">
+                <img src="img/sports_club_logo.png" alt="Sunderkhal Sports Club" class="sports">
             </div>
         </div>
+        <ul class="thumb">
+            <li><img src="img/football.png" onclick="imgSlider('img/football.png'); changeColor('#a18c02');"></li>
+            <li><img src="1.png" onclick="imgSlider('1.png'; changeColor('#2236b4');"></li>
+            <li><img src="img/basketball.png" onclick="imgSlider('img/basketball.png'); changeColor('#566a3b');"></li>
+        </ul>
     </section>
-
-    <section class="about" id="about">
-        <div class="content">
-            <div class="textBox">
-                <h2>About Us</h2>
-                <p>
-                    The Sunderkhal Sports Club is dedicated to promoting physical fitness, discipline, and sportsmanship through a variety of sports and events.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="events" id="events">
-        <div class="content">
-            <div class="textBox">
-                <h2>Upcoming Events</h2>
-                <p>
-                    Stay tuned for our upcoming sports events and tournaments. We host football, cricket, and athletics competitions regularly.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="content">
-            <div class="textBox">
-                <h2>Contact Us</h2>
-                <p>
-                    Get in touch with us to learn more about membership, sponsorships, or event participation.
-                </p>
-                <a href="mailto:support@sportsclub.com">Email Us</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="color-options">
-        <button class="color-btn" data-color="#566a3b">Green</button>
-        <button class="color-btn" data-color="#2236b4">Blue</button>
-        <button class="color-btn" data-color="#a18c02">Yellow</button>
-    </div>
+    
+    <script>
+        function imgSlider(someThing) {
+            document.querySelector('.sports').src = someThing;
+        }
+        function changeColor(color) {
+            const sec = document.querySelector('.home');
+            sec.style.background = color;
+        }
+    </script>
 </body>
     </html>
