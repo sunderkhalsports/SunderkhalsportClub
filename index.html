@@ -1,73 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sports Club</title>
+
+    <!-- Links to Stylesheets -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
             <a class="navbar-brand" href="#">Sports Club</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="members.html">Membership</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="teams.html">Teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('assets/images/sports-hero.jpg');">
-        <div class="overlay">
-            <div class="container text-center">
-                <h1 class="display-4 text-white">Join Our Sports Club</h1>
-                <p class="lead text-white">Stay fit, play hard, and be part of the community.</p>
-                <a href="members.html" class="btn btn-primary btn-lg">Become a Member</a>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" class="display-4">Welcome to the Sports Club</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="lead">Join us for events, training, and a vibrant community.</p>
+            <a href="members.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Become a Member</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">What We Offer</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa fa-futbol fa-3x"></i>
+                        <h4>Exciting Events</h4>
+                        <p>Our club hosts various sports events throughout the year to keep you active and engaged.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa fa-users fa-3x"></i>
+                        <h4>Join Teams</h4>
+                        <p>Become part of a team and compete in thrilling matches.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa fa-trophy fa-3x"></i>
+                        <h4>Win Championships</h4>
+                        <p>We strive to provide the best training and opportunities to compete at the highest level.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Live Scoreboard Section -->
-    <section class="scoreboard text-center py-5">
-        <h2>Live Scoreboard</h2>
-        <div id="live-score">
-            <!-- Live score will be updated here -->
-            <p>Loading...</p>
+    <!-- Latest News Section -->
+    <section id="news" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Latest News & Updates</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/news1.jpg" alt="News Image" class="img-fluid">
+                        <h5>New Training Programs</h5>
+                        <p>We have launched new training programs for our members to enhance their skills.</p>
+                        <a href="news.html" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets/images/news2.jpg" alt="News Image" class="img-fluid">
+                        <h5>Upcoming Tournament</h5>
+                        <p>Get ready for the most exciting tournament of the year, with incredible prizes!</p>
+                        <a href="news.html" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="assets/images/news3.jpg" alt="News Image" class="img-fluid">
+                        <h5>Membership Benefits</h5>
+                        <p>Learn about all the exclusive benefits you get when you join our club.</p>
+                        <a href="news.html" class="btn btn-link">Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Sports Club. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Sports Club | Designed by World-Class Developers</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+            </ul>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
-                    </html>
+
+    </html>
