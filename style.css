@@ -1,95 +1,167 @@
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
+    background-color: #f4f4f9;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* Navbar */
 .navbar {
-    background-color: #343a40;
+    background-color: #333;
+    padding: 20px 0;
 }
 
 .navbar-brand,
 .nav-link {
-    color: white;
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .navbar-toggler-icon {
-    background-color: white;
+    background-color: #fff;
 }
 
+/* Hero Section */
 .hero {
+    position: relative;
+    height: 100vh;
     background: url('assets/images/hero-bg.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.5s ease-in-out;
 }
 
 .hero .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 50px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero h1,
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 .hero p {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hero a {
-    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
+.hero a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Feature Section */
 .feature-card {
-    background-color: #f8f9fa;
+    background-color: #fff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card i {
+    font-size: 50px;
     color: #007bff;
+    margin-bottom: 20px;
 }
 
-#features .col-md-4 {
-    margin-bottom: 30px;
+.feature-card h4 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* News Section */
 .news-card {
-    transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .news-card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.news-card:hover {
-    transform: translateY(-10px);
+.news-card:hover img {
+    transform: scale(1.1);
 }
 
 .news-card .card-body {
-    background-color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 .news-card h5 {
-    font-size: 18px;
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
 .news-card p {
-    font-size: 14px;
+    font-size: 1rem;
+    color: #555;
 }
 
 .news-card .btn-link {
@@ -97,16 +169,23 @@ body {
     font-weight: bold;
 }
 
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
 .footer {
-    background-color: #343a40;
+    background-color: #333;
     color: white;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 .footer .social-icons a {
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 20px;
-    color: white;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 .footer .social-icons a:hover {
@@ -121,43 +200,69 @@ body {
 }
 
 .footer ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .footer ul li a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer ul li a:hover {
     color: #007bff;
 }
 
-footer p {
-    margin-top: 20px;
+.footer p {
+    margin-top: 30px;
     font-size: 14px;
+    text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
+/* Responsive Design */
+@media (max-width: 1200px) {
     .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
+        font-size: 3rem;
     }
 
     .feature-card {
         padding: 20px;
     }
 
-    .news-card .card-body {
-        padding: 15px;
+    .news-card img {
+        height: 180px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer ul li {
+        margin: 10px 0;
     }
 }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer ul li {
+        font-size: 12px;
+    }
+    }
