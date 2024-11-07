@@ -9,52 +9,72 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts for improved typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
         }
         .hero {
-            position: relative;
-            height: 60vh;
             background-size: cover;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            padding: 80px 0;
+            position: relative;
         }
-        .overlay {
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
             text-align: center;
+            padding: 100px 0;
         }
         .feature-card {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 30px;
+            background-color: #f8f9fa;
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
         .feature-card:hover {
             transform: translateY(-10px);
         }
         .news-card img {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
         }
-        .footer-links a {
-            text-decoration: none;
-            color: #555;
-            transition: color 0.3s;
+        .news-card {
+            transition: transform 0.3s ease;
         }
-        .footer-links a:hover {
-            color: #007bff;
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,19 +82,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="members.html">Membership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="members.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('assets/images/hero-bg.jpg');">
+    <section class="hero text-center" style="background-image: url('assets/images/hero-bg.jpg');">
         <div class="overlay">
             <h1 class="display-4">Welcome to Sunderkhal Sports Club</h1>
             <p class="lead">Join us to experience the thrill of sports, competition, and camaraderie.</p>
@@ -85,23 +117,23 @@
     <!-- Features Section -->
     <section id="features" class="container py-5">
         <div class="row text-center">
-            <div class="col-md-4" data-aos="fade-up">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                 <div class="feature-card">
-                    <i class="fa fa-trophy fa-3x"></i>
+                    <i class="fa fa-trophy fa-3x mb-3"></i>
                     <h3>Exciting Events</h3>
                     <p>Participate in events that challenge your skills and test your limits.</p>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                 <div class="feature-card">
-                    <i class="fa fa-users fa-3x"></i>
+                    <i class="fa fa-users fa-3x mb-3"></i>
                     <h3>Join Teams</h3>
                     <p>Be part of competitive teams and grow your talents in every game.</p>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                 <div class="feature-card">
-                    <i class="fa fa-medal fa-3x"></i>
+                    <i class="fa fa-medal fa-3x mb-3"></i>
                     <h3>Win Championships</h3>
                     <p>Win awards and gain recognition for your dedication and hard work.</p>
                 </div>
@@ -112,35 +144,35 @@
     <!-- Latest News Section -->
     <section id="news" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Latest News</h2>
+            <h2 class="text-center mb-4" data-aos="fade-up" data-aos-duration="1500">Latest News</h2>
             <div class="row">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                     <div class="news-card">
                         <img src="assets/images/news1.jpg" alt="News 1">
                         <div class="card-body">
                             <h5>Sports Event Recap</h5>
                             <p>Catch up on all the exciting highlights from our recent event.</p>
-                            <a href="events.html" class="btn btn-link">Read More</a>
+                            <a href="events.html" class="btn-link">Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                     <div class="news-card">
                         <img src="assets/images/news2.jpg" alt="News 2">
                         <div class="card-body">
                             <h5>Team Training Schedule</h5>
                             <p>Check out the updated schedule for team training sessions.</p>
-                            <a href="teams.html" class="btn btn-link">Read More</a>
+                            <a href="teams.html" class="btn-link">Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                     <div class="news-card">
                         <img src="assets/images/news3.jpg" alt="News 3">
                         <div class="card-body">
                             <h5>New Membership Offer</h5>
                             <p>Sign up today and get exclusive discounts on memberships!</p>
-                            <a href="members.html" class="btn btn-link">Read More</a>
+                            <a href="members.html" class="btn-link">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -149,16 +181,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="py-4">
         <div class="container text-center">
             <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
-            <ul class="list-inline footer-links">
+            <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                 <li class="list-inline-item"><a href="#">Terms of Service</a></li>
                 <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>
-                <li class="list-inline-item"><a href="#" class="fa fa-facebook"></a></li>
-                <li class="list-inline-item"><a href="#" class="fa fa-twitter"></a></li>
-                <li class="list-inline-item"><a href="#" class="fa fa-instagram"></a></li>
             </ul>
         </div>
     </footer>
@@ -167,8 +196,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+
+    <!-- Initialize AOS -->
     <script>
         AOS.init();
     </script>
 </body>
-                </html>
+                    </html>
