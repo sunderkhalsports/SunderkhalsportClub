@@ -1,224 +1,69 @@
-/* Google font for a more modern look */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
-    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
-/* General styles for full-width section */
-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #566a3b;
-    transition: 0.5s;
-    padding: 20px;
+h2, h4 {
+    font-weight: bold;
 }
 
-/* Header styles for a fixed top bar */
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+    margin-bottom: 30px;
 }
 
-header .logo {
+.navbar-brand {
     font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.membership .container {
+    max-width: 800px;
+}
+
+.news-card, .team-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.news-card a, .team-card a {
     text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+    color: #007bff;
 }
 
-header ul {
-    display: flex;
+.news-card:hover, .team-card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-header ul li {
-    list-style-type: none;
-    margin-left: 30px;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-/* Main content styling */
-.content {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 100px;
-}
-
-.content .textBox {
+.contact form {
     max-width: 600px;
+    margin: auto;
 }
 
-.content .textBox h2 {
-    color: #fff;
-    font-size: 4em;
-    line-height: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
+.contact label {
+    font-weight: bold;
 }
 
-.content .textBox h2 span {
-    font-size: 1.5em;
-    color: #f0d87a;
+.contact .form-control {
+    margin-bottom: 15px;
 }
 
-.content .textBox p {
-    margin: 20px 0;
-    color: #fff;
-    font-size: 1.2em;
-    line-height: 1.6em;
+.contact .btn {
+    width: 100%;
 }
-
-.content .textBox a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #fff;
-    color: #111;
-    border-radius: 40px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
-}
-
-.content .textBox a:hover {
-    background: #f0d87a;
-}
-
-.content .imgBox {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.content .imgBox img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Thumbnail section */
-.thumb {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-
-.thumb li {
-    list-style: none;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.thumb li img {
-    max-width: 80px;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover effect for thumbnails */
-.thumb li:hover {
-    transform: translateY(-10px);
-}
-
-/* Mobile-first responsive design */
-@media (max-width: 768px) {
-    /* Flex direction for the content becomes column */
-    .content {
-        flex-direction: column;
-        padding: 50px 30px;
-        text-align: center;
-    }
-
-    /* Make images take the full width of the screen */
-    .content .imgBox {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .content .imgBox img {
-        max-width: 90%;
-    }
-
-    .content .textBox h2 {
-        font-size: 2.5em;
-    }
-
-    .content .textBox p {
-        font-size: 1.1em;
-    }
-
-    /* Logo and navigation alignment for smaller screens */
-    header {
-        padding: 20px 30px;
-    }
-
-    header ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .thumb li img {
-        max-width: 60px;
-    }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-    .content {
-        padding: 20px;
-    }
-
-    .content .textBox h2 {
-        font-size: 2em;
-    }
-
-    .content .textBox p {
-        font-size: 0.9em;
-    }
-
-    header {
-        padding: 15px 20px;
-    }
-
-    .content .imgBox img {
-        max-width: 85%;
-    }
-        }
