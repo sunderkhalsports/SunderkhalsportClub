@@ -4,11 +4,12 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly down */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Ensuring the cards are stacked vertically */
+/* Ensure the cards are stacked vertically */
 #features .row {
     display: block;
 }
@@ -17,15 +18,10 @@
     margin-bottom: 30px;
 }
 
-/* AOS animation handling */
-[data-aos="fade-up"] {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start with a slight downward shift */
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1; /* Make visible when scrolled into view */
-    transform: translateY(0); /* Reset shift */
+/* AOS-like effect using CSS (when cards are in view) */
+.feature-card.show {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
 }
 
 /* Card Styling */
@@ -158,4 +154,4 @@ body {
 
 .btn-primary:hover {
     background-color: #0056b3;
-}
+    }
