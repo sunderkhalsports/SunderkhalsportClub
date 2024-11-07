@@ -13,7 +13,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,11 +33,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
-        <div class="overlay d-flex align-items-center justify-content-center text-center" style="background: rgba(0, 0, 0, 0.6); height: 100vh;">
-            <div class="container" data-aos="zoom-in">
-                <h1>Welcome to Sunderkhal Sports Club</h1>
-                <p>Experience sports, competition, and camaraderie.</p>
+    <section class="hero">
+        <div class="overlay">
+            <div class="container text-center">
+                <h1 data-aos="zoom-in">Welcome to Sunderkhal Sports Club</h1>
+                <p data-aos="fade-up">Experience sports, competition, and camaraderie.</p>
                 <a href="members.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Become a Member</a>
             </div>
         </div>
@@ -45,27 +45,24 @@
 
     <!-- Features Section -->
     <section id="features" class="container py-5">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2>Our Features</h2>
-        </div>
         <div class="row text-center">
             <div class="col-md-4" data-aos="flip-left">
-                <div class="feature-card p-4 shadow-sm rounded">
-                    <i class="fa fa-trophy mb-3" style="font-size: 2rem; color: #f39c12;"></i>
+                <div class="feature-card">
+                    <i class="fa fa-trophy"></i>
                     <h3>Exciting Events</h3>
                     <p>Join events that challenge your skills and test your limits.</p>
                 </div>
             </div>
             <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
-                <div class="feature-card p-4 shadow-sm rounded">
-                    <i class="fa fa-users mb-3" style="font-size: 2rem; color: #3498db;"></i>
+                <div class="feature-card">
+                    <i class="fa fa-users"></i>
                     <h3>Join Teams</h3>
                     <p>Compete and grow as part of competitive teams.</p>
                 </div>
             </div>
             <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
-                <div class="feature-card p-4 shadow-sm rounded">
-                    <i class="fa fa-medal mb-3" style="font-size: 2rem; color: #e74c3c;"></i>
+                <div class="feature-card">
+                    <i class="fa fa-medal"></i>
                     <h3>Win Championships</h3>
                     <p>Earn recognition for your dedication and hard work.</p>
                 </div>
@@ -76,11 +73,11 @@
     <!-- News Section -->
     <section id="news" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-down">Latest News & Updates</h2>
+            <h2 class="text-center mb-4">Latest News & Updates</h2>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-right">
-                    <div class="news-card card shadow-sm">
-                        <img src="assets/images/news1.jpg" class="card-img-top" alt="Annual Sports Meet">
+                    <div class="news-card">
+                        <img src="assets/images/news1.jpg" alt="News 1">
                         <div class="card-body">
                             <h5 class="card-title">Annual Sports Meet</h5>
                             <p class="card-text">Get ready for thrilling competitions!</p>
@@ -89,8 +86,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="news-card card shadow-sm">
-                        <img src="assets/images/news2.jpg" class="card-img-top" alt="New Membership Offer">
+                    <div class="news-card">
+                        <img src="assets/images/news2.jpg" alt="News 2">
                         <div class="card-body">
                             <h5 class="card-title">New Membership Offer</h5>
                             <p class="card-text">Sign up today for exclusive benefits.</p>
@@ -99,8 +96,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-left">
-                    <div class="news-card card shadow-sm">
-                        <img src="assets/images/news3.jpg" class="card-img-top" alt="Meet Our Champions">
+                    <div class="news-card">
+                        <img src="1.png" alt="News 3">
                         <div class="card-body">
                             <h5 class="card-title">Meet Our Champions</h5>
                             <p class="card-text">Celebrate recent competition winners.</p>
@@ -113,13 +110,13 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-light py-3">
+    <footer>
         <div class="container text-center">
             <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="privacy.html" class="text-light">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="terms.html" class="text-light">Terms & Conditions</a></li>
-                <li class="list-inline-item"><a href="contact.html" class="text-light">Contact Us</a></li>
+                <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="terms.html">Terms & Conditions</a></li>
+                <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </footer>
@@ -128,7 +125,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, easing: 'ease', once: true });
+        AOS.init({ duration: 1200, easing: 'ease-in-out', once: true });
     </script>
 </body>
     </html>
