@@ -3,55 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunderkhal Sports Club</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sports Club</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <section class="home">
-        <header>
-            <a href="#" class="logo">Sunderkhal Sports Club</a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
-
-        <div class="content">
-            <div class="textBox">
-                <h2>Welcome to<br><span>Sunderkhal Sports Club</span></h2>
-                <p id="info">
-                    Join us in promoting sports and a healthy lifestyle in Sunderkhal. We offer various activities and events for all ages!
-                </p>
-                <a href="#">View All Events</a>
-            </div>
-
-            <div class="imgBox">
-                <img src="https://via.placeholder.com/500x500.png?text=Sports+Image" alt="Sports Club Image" class="sports">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sports Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="members.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <ul class="thumb">
-            <li><img src="3.png" onclick="imgSlider('3.png'); changeColor('#a18c02'); updateInfo('Outdoor Games: Our football training sessions focus on teamwork and skill development. Join us for fun matches and events!');"></li>
-            <li><img src="2.png" onclick="imgSlider('2.png'); changeColor('#2236b4'); updateInfo('Indoor Games: Explore a variety of indoor games that provide endless fun and challenge, perfect for any indoor setting. From chess to table tennis, these games sharpen your mind and skills..');"></li>
-            <li><img src="1.png" onclick="imgSlider('1.png'); changeColor('#566a3b'); updateInfo('eSports: Join our basketball squad to improve your skills, stay fit, and compete in friendly games.');"></li>
-        </ul>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('assets/images/sports-hero.jpg');">
+        <div class="overlay">
+            <div class="container text-center">
+                <h1 class="display-4 text-white">Join Our Sports Club</h1>
+                <p class="lead text-white">Stay fit, play hard, and be part of the community.</p>
+                <a href="members.html" class="btn btn-primary btn-lg">Become a Member</a>
+            </div>
+        </div>
     </section>
 
-    <script>
-        function imgSlider(imageUrl) {
-            document.querySelector('.sports').src = imageUrl;
-        }
+    <!-- Live Scoreboard Section -->
+    <section class="scoreboard text-center py-5">
+        <h2>Live Scoreboard</h2>
+        <div id="live-score">
+            <!-- Live score will be updated here -->
+            <p>Loading...</p>
+        </div>
+    </section>
 
-        function changeColor(color) {
-            document.querySelector('.home').style.background = color;
-        }
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Sports Club. All rights reserved.</p>
+    </footer>
 
-        function updateInfo(text) {
-            document.getElementById('info').textContent = text;
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+                    </html>
