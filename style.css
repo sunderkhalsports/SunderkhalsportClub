@@ -1,69 +1,115 @@
+/* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    margin-top: 70px; /* Avoid navbar overlap */
 }
 
 h2, h4 {
     font-weight: bold;
 }
 
-.navbar {
-    margin-bottom: 30px;
-}
-
-.navbar-brand {
-    font-size: 30px;
-}
-
-.navbar-nav .nav-link {
-    font-size: 18px;
-    margin-right: 20px;
-}
-
-footer {
-    background-color: #222;
+#hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    padding: 10px 0;
-    margin-top: 40px;
+    text-align: center;
 }
 
-footer p {
-    margin: 0;
+.hero-content h1 {
+    font-size: 3rem;
 }
 
-.membership .container {
-    max-width: 800px;
+.hero-content p {
+    font-size: 1.5rem;
 }
 
-.news-card, .team-card {
+.hero-content .btn {
+    margin-top: 20px;
+}
+
+.feature-card {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.news-card a, .team-card a {
-    text-decoration: none;
+.feature-card i {
     color: #007bff;
-}
-
-.news-card:hover, .team-card:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.contact form {
-    max-width: 600px;
-    margin: auto;
-}
-
-.contact label {
-    font-weight: bold;
-}
-
-.contact .form-control {
     margin-bottom: 15px;
 }
 
-.contact .btn {
-    width: 100%;
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.news-card h5 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.news-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.news-card .btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-card .btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 20px;
+    }
+
+    .news-card {
+        margin-bottom: 15px;
+    }
+    }
