@@ -1,53 +1,47 @@
-/* Global Styles */
+/* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    padding-left: 0;
-}
-
+/* Navbar Styling */
 .navbar {
-    background-color: #343a40;
-    padding: 1rem;
+    background-color: #333;
+    padding: 10px 0;
 }
 
-.navbar .navbar-brand {
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
     color: #fff;
-    font-weight: 600;
-    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
-.navbar .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: #fff;
-    margin-right: 15px;
-    font-size: 1.1rem;
+    padding: 8px 15px;
+    font-size: 1rem;
 }
 
-.navbar .navbar-nav .nav-link:hover {
-    color: #ff6347;
+.navbar-nav .nav-link:hover {
+    color: #f5a623;
+}
+
+.navbar-toggler {
+    border-color: #f5a623;
 }
 
 /* Hero Section */
 .hero {
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
-.hero .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -57,77 +51,89 @@ ul {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 20vh;
+    color: #fff;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .hero .btn-primary {
-    padding: 10px 25px;
-    font-size: 1.1rem;
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
     border-radius: 30px;
 }
 
-/* Features Section */
+.hero .btn-primary:hover {
+    background-color: #d48f1d;
+    color: #fff;
+}
+
+/* Feature Section */
 #features {
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .feature-card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card i {
-    color: #ff6347;
-    margin-bottom: 20px;
+    color: #f5a623;
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 15px;
 }
 
 .feature-card p {
     font-size: 1rem;
+    color: #555;
 }
 
 /* News Section */
 #news {
-    padding: 60px 0;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
+    padding: 50px 0;
 }
 
 .news-card {
     background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .news-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .news-card .card-body {
@@ -135,34 +141,35 @@ ul {
 }
 
 .news-card .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .news-card .card-text {
     font-size: 1rem;
-    margin-bottom: 20px;
+    color: #555;
 }
 
 .news-card .btn-link {
-    color: #ff6347;
-    font-weight: 600;
+    font-size: 1rem;
+    color: #f5a623;
+    text-decoration: none;
 }
 
 .news-card .btn-link:hover {
-    color: #ff4500;
+    color: #d48f1d;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
-    background-color: #343a40;
+    background-color: #333;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 footer p {
+    margin: 0;
     font-size: 1rem;
-    margin-bottom: 10px;
 }
 
 footer ul {
@@ -177,82 +184,70 @@ footer ul li {
 
 footer ul li a {
     color: #fff;
+    text-decoration: none;
     font-size: 1rem;
 }
 
 footer ul li a:hover {
-    color: #ff6347;
+    color: #f5a623;
 }
 
-/* Mobile Responsiveness */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #f5a623;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
-    }
-
-    .navbar-nav .nav-link {
         font-size: 1rem;
-        margin-right: 10px;
     }
 
-    #features .col-md-4 {
+    .feature-card {
         margin-bottom: 30px;
     }
 
-    #news .col-md-4 {
-        margin-bottom: 20px;
+    .news-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 10px;
     }
 
-    footer p {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .news-card .card-title {
+        font-size: 1.2rem;
+    }
+
+    .news-card .card-text {
         font-size: 0.9rem;
     }
-
-    footer ul li a {
-        font-size: 0.9rem;
-    }
-}
-
-/* AOS Animations */
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-[data-aos="fade-right"] {
-    opacity: 0;
-    transform: translateX(50px);
-}
-
-[data-aos="fade-right"].aos-animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-[data-aos="fade-left"] {
-    opacity: 0;
-    transform: translateX(-50px);
-}
-
-[data-aos="fade-left"].aos-animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-[data-aos="zoom-in"] {
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-[data-aos="zoom-in"].aos-animate {
-    opacity: 1;
-    transform: scale(1);
     }
