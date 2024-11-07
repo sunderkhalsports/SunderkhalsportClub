@@ -9,121 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <style>
-        /* Custom styles for enhancements */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .navbar {
-            background-color: #333;
-            transition: background-color 0.3s;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: white !important;
-            font-weight: 600;
-        }
-
-        .navbar-brand:hover,
-        .nav-link:hover {
-            color: #f7c04b !important;
-        }
-
-        .hero {
-            background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .feature-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-
-        .feature-card p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .news-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-card img {
-            border-radius: 10px 10px 0 0;
-        }
-
-        .news-card .card-body {
-            padding: 15px;
-        }
-
-        .news-card .card-title {
-            font-weight: 600;
-            font-size: 1.25rem;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 0;
-        }
-
-        .footer a {
-            color: white;
-        }
-
-        .social-icons i {
-            font-size: 1.5rem;
-            margin-right: 20px;
-        }
-
-        .btn-primary {
-            background-color: #f7c04b;
-            border-color: #f7c04b;
-        }
-
-        .btn-primary:hover {
-            background-color: #d4a91c;
-            border-color: #d4a91c;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet"> <!-- External CSS -->
 </head>
 
 <body>
@@ -132,8 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -155,8 +40,7 @@
             <div class="text-center text-white px-4">
                 <h1 class="display-4" data-aos="zoom-in">Welcome to Sunderkhal Sports Club</h1>
                 <p class="lead" data-aos="fade-up">Experience the thrill, teamwork, and sportsmanship that define us.</p>
-                <a href="members.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">Join
-                    Now</a>
+                <a href="members.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">Join Now</a>
             </div>
         </div>
     </section>
@@ -222,38 +106,40 @@
                             <a href="news-details.html" class="btn btn-link">Read More</a>
                         </div>
                     </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container text-center">
-            <h2>Contact Us</h2>
-            <p class="lead mb-4">Have any questions? We'd love to hear from you!</p>
-            <a href="mailto:support@sunderkhalclub.com" class="btn btn-primary btn-lg">Email Us</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+            <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="terms.html" class="text-white">Terms & Conditions</a></li>
+                <li class="list-inline-item"><a href="contact.html" class="text-white">Contact Us</a></li>
+            </ul>
+            <!-- Social Links -->
+            <div class="social-icons mt-3">
+                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/sunderkhal.sportsclub/?hl=en" class="text-white"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();  // Initialize AOS animations
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true
+        });
     </script>
 </body>
 
-</html>
+                    </html>
