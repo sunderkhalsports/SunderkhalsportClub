@@ -1,304 +1,83 @@
 /* Global Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f9;
-    color: #333;
-    overflow-x: hidden;
-    transition: all 0.3s ease;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+}
+
+/* Body and Main Layout */
+body {
+    background-color: #f8f8f8;
     color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #007bff;
-    transform: scale(1.05);
-}
-
-button, .btn {
-    padding: 12px 36px;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
+    line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #333;
-    padding: 20px 0;
-    position: fixed;
+    background: linear-gradient(90deg, #ff6347, #ff7f50);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.scrolled {
-    background-color: #222;
-}
-
-.navbar-brand, .nav-link {
-    color: #fff !important;
+.navbar a {
+    text-decoration: none;
+    color: #fff;
     font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.navbar-toggler-icon {
-    background-color: #fff;
+.navbar a:hover {
+    transform: translateY(-3px);
+    color: #fff;
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url('assets/images/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
+    background: linear-gradient(45deg, #ff6347, #ff7f50, #ff4500);
+    background-size: 400% 400%;
+    animation: gradientPulse 15s ease infinite;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 20px;
-    overflow: hidden;
-    transition: background 0.5s ease-in-out;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    margin-bottom: 15px;
-    line-height: 1.2;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin: 20px 0;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-}
-
-.hero .btn {
-    font-size: 1.2rem;
-    padding: 14px 48px;
-    background-color: #ff6347;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-}
-
-.hero .btn:hover {
-    background-color: #ff4c35;
-    transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Feature Section */
-.feature-card {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-    margin-bottom: 50px;
-    max-width: 380px;
-    margin: 20px auto;
-    border: 2px solid #f4f4f9;
-    position: relative;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    background-color: #f1f8ff;
-}
-
-.feature-card i {
-    font-size: 60px;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.feature-card h4 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.feature-card p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.5;
-}
-
-.feature-card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(255, 99, 71, 1) 100%);
-    border-radius: 6px 6px 0 0;
-}
-
-/* News Section */
-.news-card {
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 40px;
-}
-
-.news-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover img {
-    transform: scale(1.05);
-}
-
-.news-card .card-body {
-    padding: 25px;
-    text-align: center;
-}
-
-.news-card h5 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.news-card p {
-    font-size: 1.1rem;
-    color: #777;
-}
-
-.news-card .btn-link {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-/* Footer Section */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    border-top: 8px solid #007bff;
-    position: relative;
-}
-
-.footer .social-icons a {
-    margin: 0 15px;
-    font-size: 24px;
+.hero button {
+    background-color: #ff7f50;
     color: #fff;
-    transition: color 0.3s ease, transform 0.3s ease;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.footer .social-icons a:hover {
-    color: #007bff;
-    transform: scale(1.1);
+.hero button:hover {
+    background-color: #ff4500;
 }
 
-.footer ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.footer ul li {
-    margin: 0 25px;
-}
-
-.footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.footer ul li a:hover {
-    color: #007bff;
-}
-
-.footer p {
-    margin-top: 40px;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* Scroll Animation for Navbar */
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.navbar {
-    animation: slideDown 0.5s ease-in-out;
-}
-
-/* Gradient Animation for Hero Section */
+/* Keyframes for Gradient Animation */
 @keyframes gradientPulse {
     0% {
         background-position: 0% 50%;
@@ -311,99 +90,178 @@ button:hover, .btn:hover {
     }
 }
 
-.hero {
-    background: linear-gradient(45deg, #ff6347, #007bff, #32cd32);
-    background-size: 300% 300%;
-    animation: gradientPulse 5s ease infinite;
+/* Keyframes for Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* Feature Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.feature-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h4 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* News Section */
+.news {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.news-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-card h5 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.news-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.footer .social-icons {
+    margin-bottom: 30px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+    color: #ff6347;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 0 20px;
+}
+
+.footer ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ff6347;
+}
+
+/* Scroll animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
     .hero h1 {
         font-size: 3.5rem;
     }
 
-    .feature-card {
-        padding: 30px;
-        margin-bottom: 40px;
-    }
-
-    .feature-card i {
-        font-size: 50px;
-    }
-
-    .news-card {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-
     .hero p {
         font-size: 1.1rem;
     }
 
-    .navbar .nav-link {
-        font-size: 1.1rem;
-    }
-
     .feature-card {
-        padding: 20px;
-    }
-
-    .feature-card i {
-        font-size: 45px;
+        padding: 30px;
+        margin-bottom: 30px;
     }
 
     .news-card img {
         height: 200px;
-    }
-
-    .footer {
-        padding: 60px 20px;
-    }
-
-    .footer p {
-        font-size: 12px;
-    }
-
-    .footer ul li {
-        margin: 0 15px;
-    }
-
-    .hero .btn {
-        font-size: 1rem;
-        padding: 12px 36px;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .feature-card {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .feature-card i {
-        font-size: 40px;
-    }
-
-    .news-card img {
-        height: 180px;
     }
 
     .footer {
@@ -412,189 +270,36 @@ button:hover, .btn:hover {
 
     .footer ul {
         flex-direction: column;
-        margin-top: 20px;
     }
 
     .footer ul li {
         margin: 10px 0;
     }
-
-    .social-icons a {
-        font-size: 18px;
-    }
-
-    .hero .btn {
-        font-size: 1rem;
-        padding: 12px 36px;
-    }
 }
 
-@media (max-width: 576px) {
-    .hero {
-        height: 80vh;
-        background-size: cover;
-    }
-
+/* Small devices */
+@media (max-width: 480px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 0.9rem;
-    }
-
-    .feature-card {
-        max-width: 100%;
-        padding: 15px;
-        margin-bottom: 25px;
-    }
-
-    .feature-card i {
-        font-size: 35px;
-    }
-
-    .news-card img {
-        height: 160px;
-    }
-
-    .footer {
-        padding: 40px 20px;
-    }
-
-    .footer ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .footer ul li {
-        margin: 8px 0;
-    }
-
-    .footer p {
-        font-size: 12px;
-    }
-
-    .hero .btn {
         font-size: 1rem;
-        padding: 10px 30px;
     }
 
-    .social-icons a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 400px) {
-    .hero {
-        height: 70vh;
+    .footer .social-icons a {
+        font-size: 20px;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
+    .feature-card h4 {
+        font-size: 1.5rem;
     }
 
-    .hero p {
-        font-size: 0.9rem;
+    .news-card h5 {
+        font-size: 1.2rem;
     }
 
-    .feature-card {
-        padding: 12px;
-        margin-bottom: 20px;
-    }
-
-    .feature-card i {
-        font-size: 30px;
-    }
-
-    .news-card img {
-        height: 140px;
-    }
-
-    .footer {
-        padding: 30px 20px;
-    }
-
-    .footer ul li {
-        margin: 5px 0;
-    }
-
-    .footer p {
-        font-size: 12px;
-    }
-
-    .hero .btn {
-        font-size: 0.9rem;
-        padding: 10px 28px;
-    }
-
-    .social-icons a {
+    .footer ul li a {
         font-size: 14px;
     }
-}
-
-/* Footer Scroll Animation */
-@keyframes footerSlideUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.footer {
-    animation: footerSlideUp 0.5s ease-out;
-}
-
-/* Media Queries for Large Screens */
-@media (min-width: 1800px) {
-    .hero h1 {
-        font-size: 5rem;
-    }
-
-    .feature-card {
-        padding: 50px;
-    }
-
-    .news-card img {
-        height: 300px;
-    }
-
-    .footer {
-        padding: 100px 50px;
-    }
-
-    .footer ul li {
-        margin: 0 35px;
-    }
-
-    .social-icons a {
-        font-size: 30px;
-    }
-
-    .hero .btn {
-        font-size: 1.5rem;
-        padding: 16px 50px;
-    }
-}
-
-/* Custom Scrollbars */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #007bff;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #0056b3;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }
