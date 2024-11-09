@@ -1,158 +1,183 @@
-/* Universal Reset */
+/* General Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Body Styling */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e0e5ec, #f2f5fa);
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  transition: background 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 2rem;
-  transition: all 0.3s ease;
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: background-color 0.3s ease;
 }
 
-/* Header Styling */
-header {
-  background: linear-gradient(135deg, rgba(31, 59, 108, 0.95), rgba(52, 152, 219, 0.95));
-  color: #fff;
-  padding: 2.5rem;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(12px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-header:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-}
-header h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  letter-spacing: 1.5px;
-  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+.navbar .navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-/* Button Styling */
-button {
-  background: linear-gradient(135deg, #7b68ee, #1e90ff);
-  color: #fff;
-  padding: 0.9rem 2.8rem;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  box-shadow: 0px 10px 20px rgba(30, 144, 255, 0.3);
-}
-button:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(135deg, #6a5acd, #4682b4);
-  box-shadow: 0 15px 30px rgba(30, 144, 255, 0.4);
-}
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(100, 200, 255, 0.5);
+.navbar .nav-link {
+    color: #f8f9fa;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* Card Styling */
-.card {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
-  padding: 2.8rem;
-  margin: 2rem 0;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
+.navbar .nav-link:hover {
+    color: #ffd700;
 }
 
-/* Card Content */
-.card h2 {
-  font-size: 2.2rem;
-  color: #1f3b6c;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-.card p {
-  font-size: 1.15rem;
-  color: #555;
-  line-height: 1.8;
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Footer Styling */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #1f3b6c, #3498db);
-  color: #fff;
-  border-radius: 15px;
-  margin-top: 2rem;
-  font-size: 1.05rem;
-  font-weight: 500;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  letter-spacing: 0.5px;
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
 }
 
-/* Link Styling */
-a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #1f3b6c;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
-/* Subtle Animations */
-header, .card, button {
-  animation: fadeIn 1s ease-in-out;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-@keyframes fadeIn {
-  from {
+.hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+/* Features Section */
+#features {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.feature-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+/* News Section */
+#news {
+    background-color: #f4f4f9;
+    padding: 4rem 2rem;
+}
+
+.news-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    padding: 2rem 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.footer .list-inline-item a {
+    color: #ffd700;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer .list-inline-item a:hover {
+    color: #fff;
+}
+
+.footer .social-icons a {
+    color: #ffd700;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #fff;
+}
+
+/* Animations */
+[data-aos] {
     opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
     opacity: 1;
     transform: translateY(0);
-  }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-  .card h2 {
-    font-size: 1.8rem;
-  }
-  .container {
-    padding: 1rem;
-  }
-  }
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(50px);
+}
