@@ -9,23 +9,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet"> <!-- External CSS -->
+    <link href="styles.css" rel="stylesheet"> <!-- External CSS -->
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="members.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
                     <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -35,170 +36,95 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero">
         <div class="overlay d-flex justify-content-center align-items-center">
             <div class="text-center text-white px-4">
-                <h1 class="display-4" data-aos="zoom-in">Welcome to Sunderkhal Sports Club</h1>
-                <p class="lead" data-aos="fade-up">Experience the thrill, teamwork, and sportsmanship that define us.</p>
-                <a href="members.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">Join Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">About Us</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-                    <img src="assets/images/about.jpg" class="img-fluid rounded" alt="About Sunderkhal Sports Club">
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <p>We are a community-driven sports club focused on promoting physical fitness and teamwork in Sunderkhal. Our mission is to create opportunities for all ages to engage in various sports activities, nurture talents, and build a spirit of camaraderie.</p>
-                    <p>Join us and be part of a community that values integrity, passion, and sportsmanship.</p>
-                    <a href="about.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                </div>
+                <h1 class="display-4">Welcome to Sunderkhal Sports Club</h1>
+                <p class="lead">Where passion meets excellence in sports.</p>
+                <a href="events.html" class="btn btn-light btn-lg">Join Us</a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="container py-5">
-        <h2 class="text-center mb-5">What We Offer</h2>
-        <div class="row text-center">
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="feature-card">
-                    <i class="fas fa-trophy fa-3x mb-3"></i>
-                    <h3>Exciting Events</h3>
-                    <p>Participate in thrilling competitions and make lasting memories.</p>
+                    <i class="fas fa-football-ball fa-3x mb-3"></i>
+                    <h3>Football</h3>
+                    <p>Join our football team and compete in local tournaments!</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="feature-card">
-                    <i class="fas fa-users fa-3x mb-3"></i>
-                    <h3>Team Spirit</h3>
-                    <p>Join teams, collaborate, and compete with like-minded individuals.</p>
+                    <i class="fas fa-basketball-ball fa-3x mb-3"></i>
+                    <h3>Basketball</h3>
+                    <p>Become a part of our basketball community and showcase your skills!</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="feature-card">
-                    <i class="fas fa-medal fa-3x mb-3"></i>
-                    <h3>Win Recognition</h3>
-                    <p>Get rewarded for your hard work, dedication, and sportsmanship.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parallax Section -->
-    <section class="parallax-section">
-        <div class="parallax-content">
-            <h2 data-aos="zoom-in">Join Our Community</h2>
-            <p data-aos="fade-up">"Fitness, Fun, and Friendship await you at Sunderkhal Sports Club."</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Gallery</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <img src="assets/images/gallery1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
-                </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="assets/images/gallery2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
-                </div>
-                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/images/gallery3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+                    <i class="fas fa-running fa-3x mb-3"></i>
+                    <h3>Athletics</h3>
+                    <p>Run, race, and improve your speed with our athletics programs!</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- News Section -->
-    <section id="news" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Latest News & Updates</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-right">
-                    <div class="news-card">
-                        <img src="assets/images/news1.jpg" class="img-fluid rounded" alt="Event news">
-                        <div class="card-body">
-                            <h5 class="card-title">Upcoming Sports Meet</h5>
-                            <p class="card-text">Exciting competitions are coming soon! Stay tuned.</p>
-                            <a href="events.html" class="btn btn-link">Read More</a>
-                        </div>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Latest News</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="news-card">
+                    <img src="assets/images/news1.jpg" alt="News 1" class="img-fluid">
+                    <div class="p-3">
+                        <h4>New Football Event</h4>
+                        <p>Join us for the upcoming football tournament in November!</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="news-card">
-                        <img src="assets/images/news2.jpg" class="img-fluid rounded" alt="Membership offer">
-                        <div class="card-body">
-                            <h5 class="card-title">New Membership Offer</h5>
-                            <p class="card-text">Sign up now for exclusive discounts and benefits.</p>
-                            <a href="members.html" class="btn btn-link">Read More</a>
-                        </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="news-card">
+                    <img src="assets/images/news2.jpg" alt="News 2" class="img-fluid">
+                    <div class="p-3">
+                        <h4>Basketball Championship</h4>
+                        <p>Our basketball team is gearing up for the regional championship.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-left">
-                    <div class="news-card">
-                        <img src="assets/images/news3.jpg" class="img-fluid rounded" alt="Championship news">
-                        <div class="card-body">
-                            <h5 class="card-title">Meet Our Champions</h5>
-                            <p class="card-text">Learn about our latest champions and their victories.</p>
-                            <a href="teams.html" class="btn btn-link">Read More</a>
-                        </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="news-card">
+                    <img src="assets/images/news3.jpg" alt="News 3" class="img-fluid">
+                    <div class="p-3">
+                        <h4>Athletics Training Camp</h4>
+                        <p>Registration for the annual athletics training camp is now open!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <4 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>About Sunderkhal Sports Club</h5>
-                    <p>We are dedicated to promoting fitness, teamwork, and sportsmanship. Join our community to experience the joy of sports and camaraderie.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="events.html" class="text-white">Events</a></li>
-                        <li><a href="members.html" class="text-white">Membership</a></li>
-                        <li><a href="news.html" class="text-white">News</a></li>
-                        <li><a href="teams.html" class="text-white">Teams</a></li>
-                        <li><a href="contact.html" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Contact Us</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Sunderkhal, Uttarakhand, India</p>
-                    <p><i class="fas fa-phone"></i> +91 12345 67890</p>
-                    <p><i class="fas fa-envelope"></i> contact@sunderkhalsports.com</p>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <p class="mb-0">&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
-            </div>
+    <!-- Footer -->
+    <footer class="footer text-center py-4">
+        <p>&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-z0Sa67B6Nc/j06i/WgOAYclOcBKX6kUJnqCea6BhvxjJr68SQTptPcScBOowbcKN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6kDkPChQhyH2SzV8r+3oFQyN3w5hFwS6yS2ER5f0ZzOl2zP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0gQpQov3LR4BKN/2R5bpjZmUm9O7crUOmpP5pPzZbEZF5Vh3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init(); // Initialize AOS animations
+        AOS.init();
     </script>
 </body>
 
-    </html>
+                </html>
