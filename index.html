@@ -10,6 +10,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet"> <!-- External CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('assets/images/sports-banner.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-card {
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card i {
+            color: #007bff;
+        }
+
+        .news-card {
+            background: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-card .p-3 {
+            padding: 15px;
+        }
+
+        .footer {
+            background: #343a40;
+            color: white;
+        }
+
+        .footer a {
+            color: #ffffff;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 25px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-inner img {
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +123,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="members.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
                     <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -73,6 +170,22 @@
         </div>
     </section>
 
+    <!-- Image Gallery Section -->
+    <section class="container my-5 gallery">
+        <h2 class="text-center mb-4">Sports Activities Gallery</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="assets/images/sports1.jpg" alt="Football" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="assets/images/sports2.jpg" alt="Basketball" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="assets/images/sports3.jpg" alt="Athletics" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
     <!-- News Section -->
     <section class="container my-5" id="news">
         <h2 class="text-center mb-4">Latest News</h2>
@@ -110,31 +223,36 @@
     <!-- Footer Section -->
     <footer class="footer text-center py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <h4>Contact Information</h4>
-                    <p>Email: info@sunderkhal.com</p>
-                    <p>Phone: +91-123-456-7890</p>
-                </div>
-                <div class="col-lg-6 mb-3">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
+            <p>&copy; 2024 Sunderkhal Sports Club | All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-youtube"></a>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB4M0vfF2v9wbe2f91h9BfXpeb3cXz/J1p4CChpF3z+dV3kP6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0XhXGRADGzfttF1gF3zM1u6Af+OrxNu6PewVvwr4T/5z5Tt9h" crossorigin="anonymous"></script>
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top" style="position: fixed; bottom: 20px; right: 20px; font-size: 30px; color: #007bff; text-decoration: none;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap & AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybA7Rz1Z5aZp4O7UgggqHfR9M44rfgbf6bMgmQ2gJ6r53D8Rm1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-vyyQvDlf9m9joJ0rxTgzG0lINs2H1S88I14X0O3xV7OlKH8UBpo75ftlYkw5RmH3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        // Initialize AOS (Animations)
         AOS.init();
+
+        // Scroll to Top functionality
+        document.querySelector('.scroll-to-top').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
+
 </body>
 
-    </html>
+</html>
