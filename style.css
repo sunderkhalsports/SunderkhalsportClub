@@ -8,12 +8,13 @@
 /* Body Styling */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fb;
+  background: linear-gradient(135deg, #e0e5ec, #f2f5fa);
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Container */
@@ -22,102 +23,133 @@ body {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 2rem;
+  transition: all 0.3s ease;
 }
 
 /* Header Styling */
 header {
-  background: linear-gradient(135deg, #1f3b6c, #3498db);
+  background: linear-gradient(135deg, rgba(31, 59, 108, 0.9), rgba(52, 152, 219, 0.9));
   color: #fff;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 header:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
 }
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  letter-spacing: 1.2px;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Premium Button Styling */
 button {
   background: linear-gradient(135deg, #6a5acd, #00bfff);
   color: #fff;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 2.5rem;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 8px 20px rgba(0, 149, 255, 0.3);
 }
 button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 149, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 149, 255, 0.4);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(100, 200, 255, 0.4);
 }
 
 /* Card Styling */
 .card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  margin: 1.5rem 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
 /* Card Content */
 .card h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #1f3b6c;
   margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 .card p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* Footer Styling */
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #1f3b6c;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #1f3b6c, #3498db);
   color: #fff;
-  border-radius: 12px;
+  border-radius: 15px;
   margin-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Link Styling */
 a {
   color: #3498db;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 a:hover {
   color: #2e6ba5;
 }
 
+/* Subtle Animations */
+header, .card, button {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Media Query for Mobile */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .card h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .container {
     padding: 1rem;
   }
-}
+  }
