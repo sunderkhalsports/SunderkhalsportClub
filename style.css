@@ -15,6 +15,7 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background 0.3s ease;
 }
 
 /* Container */
@@ -28,75 +29,76 @@ body {
 
 /* Header Styling */
 header {
-  background: linear-gradient(135deg, rgba(31, 59, 108, 0.9), rgba(52, 152, 219, 0.9));
+  background: linear-gradient(135deg, rgba(31, 59, 108, 0.95), rgba(52, 152, 219, 0.95));
   color: #fff;
-  padding: 2rem;
-  border-radius: 20px;
+  padding: 2.5rem;
+  border-radius: 25px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 header:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 header h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1.2px;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.8rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Premium Button Styling */
+/* Button Styling */
 button {
-  background: linear-gradient(135deg, #6a5acd, #00bfff);
+  background: linear-gradient(135deg, #7b68ee, #1e90ff);
   color: #fff;
-  padding: 0.8rem 2.5rem;
+  padding: 0.9rem 2.8rem;
   border: none;
   border-radius: 25px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   font-weight: 600;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0px 8px 20px rgba(0, 149, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  box-shadow: 0px 10px 20px rgba(30, 144, 255, 0.3);
 }
 button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 149, 255, 0.4);
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #6a5acd, #4682b4);
+  box-shadow: 0 15px 30px rgba(30, 144, 255, 0.4);
 }
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(100, 200, 255, 0.4);
+  box-shadow: 0 0 0 4px rgba(100, 200, 255, 0.5);
 }
 
 /* Card Styling */
 .card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  padding: 2.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  padding: 2.8rem;
   margin: 2rem 0;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
 }
 
 /* Card Content */
 .card h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #1f3b6c;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-weight: 700;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 .card p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #555;
   line-height: 1.8;
 }
@@ -104,14 +106,15 @@ button:focus {
 /* Footer Styling */
 footer {
   text-align: center;
-  padding: 1.2rem;
+  padding: 1.5rem;
   background: linear-gradient(135deg, #1f3b6c, #3498db);
   color: #fff;
   border-radius: 15px;
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
 }
 
 /* Link Styling */
@@ -122,7 +125,7 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #2e6ba5;
+  color: #1f3b6c;
 }
 
 /* Subtle Animations */
@@ -141,10 +144,10 @@ header, .card, button {
   }
 }
 
-/* Media Query for Mobile */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .card h2 {
     font-size: 1.8rem;
