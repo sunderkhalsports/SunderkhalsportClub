@@ -15,7 +15,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="overlay d-flex justify-content-center align-items-center">
             <div class="text-center text-white px-4">
                 <h1 class="display-4" data-aos="zoom-in">Welcome to Sunderkhal Sports Club</h1>
@@ -45,8 +45,26 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="assets/images/about.jpg" class="img-fluid rounded" alt="About Sunderkhal Sports Club">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <p>We are a community-driven sports club focused on promoting physical fitness and teamwork in Sunderkhal. Our mission is to create opportunities for all ages to engage in various sports activities, nurture talents, and build a spirit of camaraderie.</p>
+                    <p>Join us and be part of a community that values integrity, passion, and sportsmanship.</p>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="container py-5">
+        <h2 class="text-center mb-5">What We Offer</h2>
         <div class="row text-center">
             <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="feature-card">
@@ -72,8 +90,34 @@
         </div>
     </section>
 
+    <!-- Parallax Section -->
+    <section class="parallax-section">
+        <div class="parallax-content">
+            <h2 data-aos="zoom-in">Join Our Community</h2>
+            <p data-aos="fade-up">"Fitness, Fun, and Friendship await you at Sunderkhal Sports Club."</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <img src="assets/images/gallery1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/gallery2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/gallery3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- News Section -->
-    <section id="news" class="py-5 bg-light">
+    <section id="news" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Latest News & Updates</h2>
             <div class="row">
@@ -112,34 +156,49 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="privacy.html" class="text-white">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="terms.html" class="text-white">Terms & Conditions</a></li>
-                <li class="list-inline-item"><a href="contact.html" class="text-white">Contact Us</a></li>
-            </ul>
-            <!-- Social Links -->
-            <div class="social-icons mt-3">
-                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/sunderkhal.sportsclub/?hl=en" class="text-white"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+    <4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Sunderkhal Sports Club</h5>
+                    <p>We are dedicated to promoting fitness, teamwork, and sportsmanship. Join our community to experience the joy of sports and camaraderie.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="events.html" class="text-white">Events</a></li>
+                        <li><a href="members.html" class="text-white">Membership</a></li>
+                        <li><a href="news.html" class="text-white">News</a></li>
+                        <li><a href="teams.html" class="text-white">Teams</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Sunderkhal, Uttarakhand, India</p>
+                    <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+                    <p><i class="fas fa-envelope"></i> contact@sunderkhalsports.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2024 Sunderkhal Sports Club. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-z0Sa67B6Nc/j06i/WgOAYclOcBKX6kUJnqCea6BhvxjJr68SQTptPcScBOowbcKN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1200,
-            easing: 'ease-in-out',
-            once: true
-        });
+        AOS.init(); // Initialize AOS animations
     </script>
 </body>
 
-                    </html>
+    </html>
