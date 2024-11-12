@@ -15,7 +15,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">Sunderkhal Sports Club</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,42 +30,41 @@
                     <li class="nav-item"><a class="nav-link" href="pages/news.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/teams.html">Teams</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
-                    <a href="login.html" class="btn btn-outline-light position-absolute top-0 end-0 m-3">Login</a>
+                    <a href="login.html" class="btn btn-outline-primary position-absolute top-0 end-0 m-3">Login</a>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="overlay d-flex justify-content-center align-items-center">
-            <div class="text-center text-white px-4">
-                <h1 class="display-4 animated fadeInUp">Welcome to Sunderkhal Sports Club</h1>
-                <p class="lead animated fadeInUp">Where passion meets excellence in sports.</p>
-                <a href="pages/events.html" class="btn btn-light btn-lg animated fadeInUp">Join Us</a>
-            </div>
+    <section class="hero d-flex justify-content-center align-items-center text-center text-white" style="background: url('assets/images/hero-bg.jpg') no-repeat center center; background-size: cover; height: 100vh;">
+        <div class="container py-5">
+            <h1 class="display-3 mb-3 animated fadeIn">Welcome to Sunderkhal Sports Club</h1>
+            <p class="lead mb-4 animated fadeIn">Where passion meets excellence in sports.</p>
+            <a href="pages/events.html" class="btn btn-light btn-lg animated fadeIn">Join Us</a>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="container my-5" id="events">
+        <h2 class="text-center mb-4">Our Featured Sports</h2>
         <div class="row">
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="feature-card shadow p-4 text-center rounded-lg">
+                <div class="feature-card shadow-sm p-4 text-center rounded-lg">
                     <i class="fas fa-football-ball fa-3x mb-3"></i>
                     <h3>Football</h3>
                     <p>Join our football team and compete in local tournaments!</p>
                 </div>
             </div>
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="feature-card shadow p-4 text-center rounded-lg">
+                <div class="feature-card shadow-sm p-4 text-center rounded-lg">
                     <i class="fas fa-basketball-ball fa-3x mb-3"></i>
                     <h3>Basketball</h3>
                     <p>Become a part of our basketball community and showcase your skills!</p>
                 </div>
             </div>
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="feature-card shadow p-4 text-center rounded-lg">
+                <div class="feature-card shadow-sm p-4 text-center rounded-lg">
                     <i class="fas fa-running fa-3x mb-3"></i>
                     <h3>Athletics</h3>
                     <p>Run, race, and improve your speed with our athletics programs!</p>
@@ -85,7 +84,7 @@
                 <img src="assets/images/sports2.jpg" alt="Basketball" class="img-fluid rounded shadow-lg">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <img src="assets/1.png" alt="Athletics" class="img-fluid rounded shadow-lg">
+                <img src="assets/images/sports3.jpg" alt="Athletics" class="img-fluid rounded shadow-lg">
             </div>
         </div>
     </section>
@@ -147,4 +146,4 @@
     </script>
 </body>
 
-</html>
+    </html>
