@@ -248,4 +248,18 @@ a:hover {
     color: #fff;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
-    }
+}
+
+/* Text with Color Merge */
+.color-merge-text {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.color-merge-text:hover {
+    background: linear-gradient(135deg, #ff6b6b, #e63946, #1d3557);
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(1.05);
+}
