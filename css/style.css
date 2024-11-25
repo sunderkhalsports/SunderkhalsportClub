@@ -13,8 +13,9 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    padding: 10px;
+    padding: 0;
     overflow-x: hidden;
+    color: #fff;
 }
 
 /* Container: Single column layout for mobile */
@@ -23,9 +24,10 @@ body {
     grid-template-columns: 1fr;
     gap: 20px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     overflow-x: hidden;
+    height: 100%;
 }
 
 /* Scroll Progress Bar */
@@ -34,10 +36,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background-color: #ff6b6b;
     z-index: 9999;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .section {
@@ -45,13 +47,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
     font-size: 2rem;
-    padding: 40px;
+    padding: 20px;
     opacity: 0; /* Initially invisible */
     transform: translateY(50px); /* Start from below */
-    transition: transform 0.6s ease, opacity 0.7s ease, background 0.5s ease;
+    transition: transform 0.6s ease, opacity 0.7s ease;
     touch-action: manipulation; /* Improve touch performance */
 }
 
@@ -133,40 +134,54 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
     .container {
-        grid-template-columns: 1fr; /* One column layout for mobile */
+        padding: 10px;
+        gap: 10px;
     }
 
     .section {
         font-size: 1.5rem;
-        padding: 20px;
-        opacity: 0; /* Keep sections hidden until animated */
-        transform: translateY(40px); /* Reduced animation distance */
+        padding: 15px;
+        opacity: 0;
+        transform: translateY(40px);
     }
 
-    /* Enhanced gradients for mobile sections */
-    .section-1:hover {
-        background: linear-gradient(135deg, #ff6b6b, #e63946);
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7 {
+        font-size: 1.4rem;
+        padding: 25px;
     }
-    .section-2:hover {
-        background: linear-gradient(120deg, #ff6b6b, #457b9d);
+
+    /* Hover effects for touch devices */
+    .section:hover {
+        background: #ff6b6b;
     }
-    .section-3:hover {
-        background: linear-gradient(45deg, #1d3557, #e63946);
+
+    /* Scroll progress bar */
+    .progress-bar {
+        height: 3px;
     }
-    .section-4:hover {
-        background: linear-gradient(90deg, #ff6b6b, #1d3557);
+
+    /* Parallax Effect - Adjust for mobile */
+    .parallax-background {
+        transform: translateY(0);
     }
-    .section-5:hover {
-        background: radial-gradient(circle, rgba(255, 107, 107, 0.7), rgba(0, 0, 0, 0.5));
-    }
-    .section-6:hover {
-        background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(255, 107, 107, 0.7));
-    }
-    .section-7:hover {
-        background: url('https://www.example.com/gradient-image.jpg') no-repeat center center;
-        background-size: cover;
-    }
+}
+
+/* Improved Font Sizes for Mobile */
+h1, h2, h3, p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Image Handling: Make images responsive */
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Smooth Scrolling */
@@ -189,4 +204,37 @@ html {
 
 .section-1 {
     animation: moveBackground 1.5s infinite ease-in-out;
-        }
+}
+
+/* Prevent text and images from being too close to the screen edges */
+.container, .section {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Handle Smaller Elements on Mobile */
+.section .content {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* Adjust for smaller mobile screens */
+@media screen and (max-width: 480px) {
+    .section {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .progress-bar {
+        height: 2px;
+    }
+
+    .section-1, .section-2, .section-3, .section-4 {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    .section-7 {
+        background-size: cover;
+    }
+                                }
