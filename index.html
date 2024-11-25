@@ -11,6 +11,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet"> <!-- External CSS -->
+    <style>
+        /* Gradient Sections */
+        .gradient-section {
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.6), rgba(0, 255, 255, 0.6)), 
+                        linear-gradient(to bottom right, rgba(0, 204, 255, 0.6), rgba(0, 0, 255, 0.6));
+            padding: 50px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        
+        .gradient-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gradient-grid > div {
+            background: linear-gradient(to top left, rgba(255, 140, 0, 0.6), rgba(255, 255, 0, 0.6));
+            padding: 50px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-grid > div:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card {
+            background: linear-gradient(to bottom right, rgba(128, 0, 128, 0.7), rgba(0, 128, 0, 0.7));
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card {
+            background: linear-gradient(to right, rgba(34, 193, 195, 0.7), rgba(253, 187, 45, 0.7));
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Text Gradient */
+        .color-merge-text {
+            background: linear-gradient(to top, #ff7e5f, #feb47b);
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,6 +100,31 @@
             <h1 class="color-merge-text">Welcome to Sunderkhal Sports Club</h1>
             <p class="color-merge-text">Where passion meets excellence in sports.</p>
             <a href="pages/events.html" class="btn btn-light btn-lg animated fadeIn">Join Us</a>
+        </div>
+    </section>
+
+    <!-- Gradient Grid Section -->
+    <section class="gradient-section">
+        <div class="container">
+            <h2>Explore Our Sports Activities</h2>
+            <div class="gradient-grid">
+                <div>
+                    <h4>Football</h4>
+                    <p>Join our football team and compete in local tournaments!</p>
+                </div>
+                <div>
+                    <h4>Basketball</h4>
+                    <p>Become a part of our basketball community and showcase your skills!</p>
+                </div>
+                <div>
+                    <h4>Athletics</h4>
+                    <p>Run, race, and improve your speed with our athletics programs!</p>
+                </div>
+                <div>
+                    <h4>Swimming</h4>
+                    <p>Our swimming team is training for state-level championships.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -99,7 +181,8 @@
                     <img src="assets/images/news1.jpg" alt="News 1" class="img-fluid rounded-top">
                     <div class="p-3">
                         <h4>New Football Event</h4>
-                        <p>Join us for the upcoming football tournament in November!</p>
+                        <p>Join us for the upcoming football event where our team will compete against the best local teams. Don't miss out!</p>
+                        <a href="pages/news-details.html" class="btn btn-light">Read More</a>
                     </div>
                 </div>
             </div>
@@ -107,8 +190,9 @@
                 <div class="news-card">
                     <img src="assets/images/news2.jpg" alt="News 2" class="img-fluid rounded-top">
                     <div class="p-3">
-                        <h4>Basketball Championship</h4>
-                        <p>Our basketball team is gearing up for the regional championship.</p>
+                        <h4>Basketball Training Camp</h4>
+                        <p>Get ready for our annual basketball training camp! Spots are limited, so make sure to sign up soon!</p>
+                        <a href="pages/news-details.html" class="btn btn-light">Read More</a>
                     </div>
                 </div>
             </div>
@@ -116,34 +200,40 @@
                 <div class="news-card">
                     <img src="assets/images/news3.jpg" alt="News 3" class="img-fluid rounded-top">
                     <div class="p-3">
-                        <h4>New Athletics Records</h4>
-                        <p>Our athletes have broken several new records this season. Read more about their success!</p>
+                        <h4>Athletics Championship</h4>
+                        <p>Our athletes are gearing up for the upcoming athletics championship. Show your support!</p>
+                        <a href="pages/news-details.html" class="btn btn-light">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer py-4">
-        <div class="container text-center">
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
             <p>&copy; 2024 Sunderkhal Sports Club. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+            <div>
+                <a href="https://facebook.com" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS, Popper.js, and AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init(); // Initialize AOS for animations
+        AOS.init({
+            duration: 1200, // Animation duration
+            once: true, // Only animate once
+        });
     </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-OgVRvuATP1z7Jj0r9KwL2Zk7zjXc8yog5PZj+0+f02R9fZZ5o6rwDSv3nD4eCmf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-KyZXEJ6QZSh7VJb8FvYbLDF93f7gZcFu5wh2h4XZ7pXgJlxcT6Vqg5k5XgbHErVj" crossorigin="anonymous"></script>
 </body>
 
-                                             </html>
+</html>
