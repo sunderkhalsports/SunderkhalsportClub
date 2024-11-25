@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -14,35 +14,48 @@ body {
     min-height: 100vh;
     flex-direction: column;
     padding: 10px;
+    overflow-x: hidden;
 }
 
-/* Mobile-First Layout: Single Column */
+/* Container: Single column layout for mobile */
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Sections with Base Styles */
+/* Scroll Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff6b6b;
+    z-index: 9999;
+    opacity: 0.5;
+}
+
 .section {
-    height: 100%;
-    border-radius: 15px;
+    height: 100vh; /* Full height for each section */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 20px;
+    font-size: 2rem;
+    padding: 40px;
     opacity: 0; /* Initially invisible */
     transform: translateY(50px); /* Start from below */
-    transition: transform 0.3s ease, opacity 0.5s ease, background 0.5s ease;
+    transition: transform 0.6s ease, opacity 0.7s ease, background 0.5s ease;
     touch-action: manipulation; /* Improve touch performance */
 }
 
-/* Section Specific Styles */
+/* Specific Section Backgrounds */
 .section-1 {
     background: linear-gradient(135deg, #ff6b6b, #e63946);
 }
@@ -87,27 +100,51 @@ body {
     color: white;
 }
 
-/* Hover and Touch Effects */
-.section:hover, .section:active {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ff6b6b, #e63946); /* Temporary hover effect */
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Responsive Design for Mobile Screens */
+/* Parallax Effect */
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.example.com/gradient-image.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateY(-50%); /* Initial positioning */
+    will-change: transform;
+}
+
+/* Scroll Animations */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Single-column grid for mobile */
-        grid-template-rows: auto; /* Adjusts rows dynamically based on content */
+        grid-template-columns: 1fr; /* One column layout for mobile */
     }
 
     .section {
-        font-size: 1.2rem;
-        padding: 15px;
-        opacity: 0; /* Keep sections hidden initially */
-        transform: translateY(20px); /* Slightly reduce animation start position */
+        font-size: 1.5rem;
+        padding: 20px;
+        opacity: 0; /* Keep sections hidden until animated */
+        transform: translateY(40px); /* Reduced animation distance */
     }
 
-    /* Gradients for mobile with added subtle effects */
+    /* Enhanced gradients for mobile sections */
     .section-1:hover {
         background: linear-gradient(135deg, #ff6b6b, #e63946);
     }
@@ -132,19 +169,24 @@ body {
     }
 }
 
-/* Adding animations for smooth entrance */
-@keyframes fadeInUp {
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Interactive Scroll Effect */
+@keyframes moveBackground {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Slight upward movement */
     }
     100% {
-        opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Apply animation on scroll for mobile */
-.section {
-    animation: fadeInUp 1s ease-out forwards;
-    }
+.section-1 {
+    animation: moveBackground 1.5s infinite ease-in-out;
+        }
