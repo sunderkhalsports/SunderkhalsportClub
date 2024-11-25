@@ -13,16 +13,16 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
+    padding: 10px;
 }
 
-/* Grid Layout with Multiple Gradients */
+/* Mobile-First Layout: Single Column */
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 vertical sections */
-    grid-template-rows: repeat(2, 1fr);    /* 2 horizontal sections */
-    gap: 20px;
-    padding: 20px;
-    width: 80%;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
 }
 
 /* Sections with Base Styles */
@@ -38,7 +38,8 @@ body {
     padding: 20px;
     opacity: 0; /* Initially invisible */
     transform: translateY(50px); /* Start from below */
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    transition: transform 0.3s ease, opacity 0.5s ease, background 0.5s ease;
+    touch-action: manipulation; /* Improve touch performance */
 }
 
 /* Section Specific Styles */
@@ -86,20 +87,64 @@ body {
     color: white;
 }
 
-/* Hover Effects */
-.section:hover {
+/* Hover and Touch Effects */
+.section:hover, .section:active {
     transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6b6b, #e63946); /* Temporary hover effect */
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile Screens */
 @media screen and (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
-        grid-template-rows: repeat(4, 1fr); /* 4 rows for a more compact layout */
+        grid-template-columns: 1fr; /* Single-column grid for mobile */
+        grid-template-rows: auto; /* Adjusts rows dynamically based on content */
     }
 
     .section {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 1.2rem;
+        padding: 15px;
+        opacity: 0; /* Keep sections hidden initially */
+        transform: translateY(20px); /* Slightly reduce animation start position */
+    }
+
+    /* Gradients for mobile with added subtle effects */
+    .section-1:hover {
+        background: linear-gradient(135deg, #ff6b6b, #e63946);
+    }
+    .section-2:hover {
+        background: linear-gradient(120deg, #ff6b6b, #457b9d);
+    }
+    .section-3:hover {
+        background: linear-gradient(45deg, #1d3557, #e63946);
+    }
+    .section-4:hover {
+        background: linear-gradient(90deg, #ff6b6b, #1d3557);
+    }
+    .section-5:hover {
+        background: radial-gradient(circle, rgba(255, 107, 107, 0.7), rgba(0, 0, 0, 0.5));
+    }
+    .section-6:hover {
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(255, 107, 107, 0.7));
+    }
+    .section-7:hover {
+        background: url('https://www.example.com/gradient-image.jpg') no-repeat center center;
+        background-size: cover;
     }
 }
+
+/* Adding animations for smooth entrance */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation on scroll for mobile */
+.section {
+    animation: fadeInUp 1s ease-out forwards;
+    }
